@@ -1,0 +1,9 @@
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\bin\Debug\Relief System.exe.config
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\bin\Debug\Relief System.exe
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\bin\Debug\Relief System.pdb
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.csprojResolveAssemblyReference.cache
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form1.resources
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Properties.Resources.resources
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.csproj.GenerateResource.Cache
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.exe
+c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.pdb
