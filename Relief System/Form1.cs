@@ -11,10 +11,8 @@ using System.Windows.Forms;
 namespace Relief_System
 {
 
-    public partial class Form1 : Form
+    public partial class Form1 :Form
     {
-        static int tno;
-        static String tname, sec;
         public Form1()
         {
             InitializeComponent();
@@ -22,10 +20,10 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tno = 1001;
-            tname = textBox1.Text;
-            sec = textBox2.Text;
-            MessageBox.Show("Hellow\n"+tno+"\n"+tname+"\n"+sec);
+            Program.tno = 1001;
+            Program.tname = textBox1.Text;
+            Program.sec = textBox2.Text;
+            MessageBox.Show("Hellow\n"+Program.tno+"\n"+ Program.tname +"\n"+ Program.sec);
         }
     }
 }

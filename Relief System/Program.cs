@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
 
 namespace Relief_System
 {
-    static class Program
+    public class Program
     {
-        
+        public static int tno;
+        public static String tname, sec;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
