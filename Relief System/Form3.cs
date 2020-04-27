@@ -5,27 +5,23 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Relief_System
 {
-
-    public partial class Form1 :Form
+    public partial class Form3 : Form
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
-            Program.tno = 1001;
+            Program.subno = 1001;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.tname = textBox1.Text;
-            Program.sec = textBox2.Text;
-            Teacher.tadd();
+            Program.subname = textBox1.Text;
+            Subject.subadd();
             textBox1.Text = "";
-            textBox2.Text = "";
         }
     }
 }

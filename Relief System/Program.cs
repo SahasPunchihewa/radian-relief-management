@@ -12,9 +12,10 @@ namespace Relief_System
     {
         public static MySqlConnection con;
         public static MySqlCommand cmd;
-        public static int tno,present=0;
-        public static String tname, sec;
+        public static int tno,present=0,subno,classno=0;
+        public static String tname, sec,subname,sqlaltetable,classname;
         public static MySqlDataReader r;
+        public static int[] timearr = new int[8];
 
         /// <summary>
         /// The main entry point for the application.
@@ -31,7 +32,7 @@ namespace Relief_System
             new Program();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new Switch());
             con.Close();
         }
     }

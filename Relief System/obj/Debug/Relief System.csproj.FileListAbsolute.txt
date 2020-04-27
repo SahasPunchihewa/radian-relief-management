@@ -9,3 +9,6 @@ c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System
 c:\users\sahas\documents\visual studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.pdb
 C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\MySql.Data.dll
 C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form2.resources
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form3.resources
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form4.resources
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Switch.resources
