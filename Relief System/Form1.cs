@@ -23,7 +23,9 @@ namespace Relief_System
             Program.tno = 1001;
             Program.tname = textBox1.Text;
             Program.sec = textBox2.Text;
-            MessageBox.Show("Hellow\n"+Program.tno+"\n"+ Program.tname +"\n"+ Program.sec);
+            Teacher.tadd();
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }
