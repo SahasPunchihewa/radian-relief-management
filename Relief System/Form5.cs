@@ -15,13 +15,15 @@ namespace Relief_System
         {
             InitializeComponent();
             Program.classno = 1001;
+            Program.clzno = 1001;
             Relief.classload();
+            Relief.teachertime();
             label1.Text = Program.classname;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Relief.timeget();
         }
     }
 }
