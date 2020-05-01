@@ -181,7 +181,6 @@ namespace Relief_System
                         {
                             testarr[i] = 0;
                             randfound();
-                            r.NextResult();
                         }
                     }
                 }
@@ -189,11 +188,13 @@ namespace Relief_System
                 {
                     MessageBox.Show(ex.Message+" MSG 4"+" "+i);
                 }
+                r.Close();
             }
             r.Close();
         }
         public static void randfound()
         {
+            r.Close();
             if (i == 0)
             {
                 try
@@ -322,6 +323,7 @@ namespace Relief_System
                     MessageBox.Show(ex.Message);
                 }
             }
+            r.NextResult();
         }
     }
 }

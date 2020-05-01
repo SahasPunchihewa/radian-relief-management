@@ -63,6 +63,49 @@ namespace Relief_System
                         label19.Text = Convert.ToString(Program.testarr[j]);
                     }
                 }
+                else
+                {
+                    if (j == 0)
+                    {
+                        label12.Text = Convert.ToString(Program.reliefarr[j]);
+                        label12.ForeColor = Color.Red;
+                    }
+                    if (j == 1)
+                    {
+                        label13.Text = Convert.ToString(Program.reliefarr[j]);
+                        label13.ForeColor = Color.Red;
+                    }
+                    if (j == 2)
+                    {
+                        label14.Text = Convert.ToString(Program.reliefarr[j]);
+                        label14.ForeColor = Color.Red;
+                    }
+                    if (j == 3)
+                    {
+                        label15.Text = Convert.ToString(Program.reliefarr[j]);
+                        label15.ForeColor = Color.Red;
+                    }
+                    if (j == 4)
+                    {
+                        label16.Text = Convert.ToString(Program.reliefarr[j]);
+                        label16.ForeColor = Color.Red;
+                    }
+                    if (j == 5)
+                    {
+                        label17.Text = Convert.ToString(Program.reliefarr[j]);
+                        label17.ForeColor = Color.Red;
+                    }
+                    if (j == 6)
+                    {
+                        label18.Text = Convert.ToString(Program.reliefarr[j]);
+                        label18.ForeColor = Color.Red;
+                    }
+                    if (j == 7)
+                    {
+                        label19.Text = Convert.ToString(Program.reliefarr[j]);
+                        label19.ForeColor = Color.Red;
+                    }
+                }
             }
         }
     }
