@@ -13,7 +13,7 @@ namespace Relief_System
         public static MySqlConnection con;
         public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0;
-        public static String tname, sec,subname,sqlaltetable,classname;
+        public static String tname, sec,subname,sqlaltetable,classname,relno;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8];
         public static int[] testarr = new int[8];
@@ -32,6 +32,15 @@ namespace Relief_System
                 reliefarr[i] = 0;
             }
             db.dbase();
+            try
+            {
+                cmd.CommandText = "UPDATE `teacher` SET `One`=0,`Two`=0,`Three`=0,`Four`=0,`Five`=0,`Six`=0,`Seven`=0,`Eight`=0";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         static void Main()

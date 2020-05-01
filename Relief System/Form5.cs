@@ -24,6 +24,7 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Relief.timeget();
             Relief.abscheck();
             for (int j = 0;j< 8;j++)
@@ -106,7 +107,34 @@ namespace Relief_System
                         label19.ForeColor = Color.Red;
                     }
                 }
+                Relief.trelupdater();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label12.Text = "";
+            label13.Text = "";
+            label14.Text = "";
+            label15.Text = "";
+            label16.Text = "";
+            label17.Text = "";
+            label18.Text = "";
+            label19.Text = "";
+            label12.ForeColor = Color.Black;
+            label13.ForeColor = Color.Black;
+            label14.ForeColor = Color.Black;
+            label15.ForeColor = Color.Black;
+            label16.ForeColor = Color.Black;
+            label17.ForeColor = Color.Black;
+            label18.ForeColor = Color.Black;
+            label19.ForeColor = Color.Black;
+            Program.classno++;
+            Program.clzno = Program.classno;
+            Relief.resetter();
+            Relief.classload();
+            Relief.teachertime();
+            label1.Text = Program.classname;
         }
     }
 }

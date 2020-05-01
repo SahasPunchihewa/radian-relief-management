@@ -10,7 +10,14 @@ namespace Relief_System
     {
         public static void resetter()
         {
-            try
+            for(i=0;i<8;i++)
+            {
+                timearr[i]= 0;
+                testarr[i]= 0;
+                reliefarr[i]= 0;
+                tarr[i]= 0;
+    }
+            /*try
             {
                 cmd.CommandText = "UPDATE `teacher` SET `One`=0,`Two`=0,`Three`=0,`Four`=0,`Five`=0,`Six`=0,`Seven`=0,`Eight`=0";
                 cmd.ExecuteNonQuery();
@@ -18,7 +25,7 @@ namespace Relief_System
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
         public static void teachertime()
         {
@@ -324,6 +331,112 @@ namespace Relief_System
                 }
             }
             r.NextResult();
+        }
+        public static void trelupdater()
+        {
+            for (i = 0; i < 8; i++)
+            {
+                if (reliefarr[i] != 0)
+                {
+                    if(i==0)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set One='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 1)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Two='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 2)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Three='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 3)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Four='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 4)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Five='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 5)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Six='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 6)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Seven='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (i == 7)
+                    {
+                        try
+                        {
+                            cmd.CommandText = "update teacher set Eight='" + (classno + 1000) + "' where No='" + reliefarr[i] + "'";
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
