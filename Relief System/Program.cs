@@ -11,7 +11,7 @@ namespace Relief_System
     public class Program
     {
         public static MySqlConnection con;
-        public static MySqlCommand cmd,cmd2;
+        public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0;
         public static String tname, sec,subname,sqlaltetable,classname;
         public static MySqlDataReader r;
@@ -26,8 +26,12 @@ namespace Relief_System
 
         public Program()
         {
-            db.dbase();
             
+            for(i=0;i<8;i++)
+            {
+                reliefarr[i] = 0;
+            }
+            db.dbase();
         }
 
         static void Main()

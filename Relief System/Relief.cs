@@ -8,6 +8,18 @@ namespace Relief_System
 {
     class Relief:Program
     {
+        public static void resetter()
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE `teacher` SET `One`=0,`Two`=0,`Three`=0,`Four`=0,`Five`=0,`Six`=0,`Seven`=0,`Eight`=0";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public static void teachertime()
         {
             ca = 0;
@@ -38,8 +50,8 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd2.CommandText = "update teacher set One='" + clzno + "' where No='" + tarr[0] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set One='" + clzno + "' where No='" + tarr[0] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -47,8 +59,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Two='" + clzno + "' where No='" + tarr[1] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Two='" + clzno + "' where No='" + tarr[1] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -56,8 +68,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Three='" + clzno + "' where No='" + tarr[2] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Three='" + clzno + "' where No='" + tarr[2] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -65,8 +77,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Four='" + clzno + "' where No='" + tarr[3] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Four='" + clzno + "' where No='" + tarr[3] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -74,8 +86,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Five='" + clzno + "' where No='" + tarr[4] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Five='" + clzno + "' where No='" + tarr[4] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -83,8 +95,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Six='" + clzno + "' where No='" + tarr[5] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Six='" + clzno + "' where No='" + tarr[5] + "'";
+                    cmd .ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -92,8 +104,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Seven='" + clzno + "' where No='" + tarr[6] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Seven='" + clzno + "' where No='" + tarr[6] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -101,8 +113,8 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd2.CommandText = "update teacher set Eight='" + clzno + "' where No='" + tarr[7] + "'";
-                    cmd2.ExecuteNonQuery();
+                    cmd.CommandText = "update teacher set Eight='" + clzno + "' where No='" + tarr[7] + "'";
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -138,19 +150,19 @@ namespace Relief_System
                 while (r.Read())
                 {
                     testarr[0] = r.GetInt32("One");
-                    testarr[0] = r.GetInt32("Two");
-                    testarr[0] = r.GetInt32("Three");
-                    testarr[0] = r.GetInt32("Four");
-                    testarr[0] = r.GetInt32("Five");
-                    testarr[0] = r.GetInt32("Six");
-                    testarr[0] = r.GetInt32("Seven");
-                    testarr[0] = r.GetInt32("Eight");
+                    testarr[1] = r.GetInt32("Two");
+                    testarr[2] = r.GetInt32("Three");
+                    testarr[3] = r.GetInt32("Four");
+                    testarr[4] = r.GetInt32("Five");
+                    testarr[5] = r.GetInt32("Six");
+                    testarr[6] = r.GetInt32("Seven");
+                    testarr[7] = r.GetInt32("Eight");
                 }
                 r.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+" MSG 3");
             }
         }
         public static void abscheck()
@@ -160,41 +172,155 @@ namespace Relief_System
                 present = 0;
                 try
                 {
-                    cmd.CommandText = "SELECT Present FROM class where No='" + testarr[i] + "'";
+                    cmd.CommandText = "SELECT Present FROM teacher where No='" + testarr[i] + "'";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
                         present = r.GetInt32(0);
                         if(present==0)
                         {
+                            testarr[i] = 0;
                             randfound();
+                            r.NextResult();
                         }
                     }
-                    r.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message+" MSG 4"+" "+i);
+                }
+            }
+            r.Close();
+        }
+        public static void randfound()
+        {
+            if (i == 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
-        public static void randfound()
-        {
-            try
+            if (i == 1)
             {
-                cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 ORDER BY RAND() LIMIT 1";
-                r = cmd.ExecuteReader();
-                while (r.Read())
+                try
                 {
-                    rtmp = r.GetInt32(0);
-
-                    
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Two=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
                 }
-                r.Close();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            if (i == 2)
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Three=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 3)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Four=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 4)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Five=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 5)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Six=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 6)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Seven=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 7)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Eight=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

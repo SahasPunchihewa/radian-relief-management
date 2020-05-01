@@ -14,7 +14,6 @@ namespace Relief_System
         {
             con = new MySqlConnection("server=localhost;database=radian-relief;uid=root;pwd=;");
             cmd = con.CreateCommand();
-            cmd2 = con.CreateCommand();
             try
             {
                 con.Open();
