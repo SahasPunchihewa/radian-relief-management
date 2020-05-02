@@ -12,13 +12,14 @@ namespace Relief_System
     {
         public static MySqlConnection con;
         public static MySqlCommand cmd;
-        public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0;
+        public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0,date;
         public static String tname, sec,subname,sqlaltetable,classname,relno;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8];
         public static int[] testarr = new int[8];
         public static int[] reliefarr = new int[8];
         public static int[] tarr = new int[8];
+        public static int[] newt = new int[8];
 
         /// <summary>
         /// The main entry point for the application.
@@ -41,6 +42,7 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message);
             }
+            date = Convert.ToInt32(DateTime.Now.ToString("dd"));
         }
 
         static void Main()

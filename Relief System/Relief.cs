@@ -16,16 +16,7 @@ namespace Relief_System
                 testarr[i]= 0;
                 reliefarr[i]= 0;
                 tarr[i]= 0;
-    }
-            /*try
-            {
-                cmd.CommandText = "UPDATE `teacher` SET `One`=0,`Two`=0,`Three`=0,`Four`=0,`Five`=0,`Six`=0,`Seven`=0,`Eight`=0";
-                cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
         }
         public static void teachertime()
         {
@@ -435,6 +426,26 @@ namespace Relief_System
                         }
                     }
 
+                }
+            }
+        }
+        public static void reliefclz()
+        {
+            try
+            {
+                cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno+1000 + (date * 10)) + "','" + classname + "','" + newt[0] + "','" + newt[1] + "','" + newt[2] + "','" + newt[3] + "','" + newt[4] + "','" + newt[5] + "','" + newt[6] + "','" + newt[7] + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    cmd.CommandText = "update class set One='" + newt[0] + "',Two='" + newt[1] + "',Three='" + newt[2] + "',Four='" + newt[3] + "',Five='" + newt[4] + "',Six='" + newt[5] + "',Seven='" + newt[6] + "',Eight='" + newt[0] + "' where No='" + (classno + 1000 + (date * 10))+"'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex2)
+                {
+                    MessageBox.Show(ex2.Message);
                 }
             }
         }

@@ -31,7 +31,8 @@ namespace Relief_System
             {
                 if(Program.testarr[j]!=0)
                 {
-                    if(j==0)
+                    Program.newt[j] = Program.testarr[j];
+                    if (j == 0)
                     {
                         label12.Text = Convert.ToString(Program.testarr[j]);
                     }
@@ -66,6 +67,7 @@ namespace Relief_System
                 }
                 else
                 {
+                    Program.newt[j] = Program.reliefarr[j];
                     if (j == 0)
                     {
                         label12.Text = Convert.ToString(Program.reliefarr[j]);
@@ -109,6 +111,7 @@ namespace Relief_System
                 }
                 Relief.trelupdater();
             }
+            Relief.reliefclz();
         }
 
         private void button2_Click(object sender, EventArgs e)
