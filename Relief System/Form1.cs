@@ -17,15 +17,37 @@ namespace Relief_System
         {
             InitializeComponent();
             Program.tno = 1001;
+            checkedListBox1.Items.Clear();
+            for(int j=12;j<Program.al1.Count;j++)
+            {
+                checkedListBox1.Items.Add(Program.al1[j]);
+            }
+            Program.subarr = new int[Program.al1.Count];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Program.tname = textBox1.Text;
-            Program.sec = textBox2.Text;
-            Teacher.tadd();
-            textBox1.Text = "";
-            textBox2.Text = "";
+            //Teacher.tadd();
+            // textBox1.Text = "";
+            for (int j = 0; j < Program.al1.Count; j++)
+            {
+                MessageBox.Show(Convert.ToString(Program.subarr[j]));
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (int cindex1 in checkedListBox1.CheckedIndices)
+            {
+                for (int j = 0; j < Program.al1.Count; j++)
+                {
+                    if (cindex1 == j)
+                    {
+                        Program.subarr[j] = 1;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace Relief_System
         public static int[] reliefarr = new int[8];
         public static int[] tarr = new int[8];
         public static int[] newt = new int[8];
+        public static ArrayList al1;
+        public static int[] subarr;
 
         /// <summary>
         /// The main entry point for the application.
@@ -43,6 +46,8 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }
             date = Convert.ToInt32(DateTime.Now.ToString("dd"));
+            al1 = new ArrayList();
+            Teacher.subload();
         }
 
         static void Main()

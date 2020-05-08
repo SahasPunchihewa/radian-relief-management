@@ -28,7 +28,7 @@ namespace Relief_System
             }
             try
             {
-                cmd.CommandText = "insert into teacher(No,Name,Section) values('" + tno + "','" + tname + "','" + sec + "')";
+                cmd.CommandText = "insert into teacher(No,Name) values('" + tno + "','" + tname + "')";
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
@@ -59,6 +59,23 @@ namespace Relief_System
             {
                 cmd.CommandText = "update teacher SET Present = '"+present+"'where No = '"+tno+"'";
                 cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static void subload()
+        {
+            try
+            {
+                cmd.CommandText = "select COLUMN_NAME from information_schema.columns where TABLE_SCHEMA='radian-relief' And TABLE_NAME='teacher'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    al1.Add(r.GetString(0));
+                }
+                r.Close();
             }
             catch (Exception ex)
             {
