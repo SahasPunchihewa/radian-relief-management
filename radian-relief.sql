@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 07:42 PM
+-- Generation Time: May 09, 2020 at 07:20 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `class` (
   `No` int(11) NOT NULL,
-  `Name` int(11) NOT NULL,
+  `Name` text NOT NULL,
   `One` int(11) NOT NULL,
   `Two` int(11) NOT NULL,
   `Three` int(11) NOT NULL,
@@ -57,11 +57,16 @@ CREATE TABLE `subject` (
 CREATE TABLE `teacher` (
   `No` int(11) NOT NULL,
   `Name` text NOT NULL,
-  `Section` text NOT NULL,
-  `Present` int(11) DEFAULT NULL,
-  `English` int(11) DEFAULT NULL,
-  `Science` int(11) DEFAULT NULL,
-  `Maths` int(11) DEFAULT NULL
+  `Section` text,
+  `One` int(11) DEFAULT '0',
+  `Two` int(11) DEFAULT '0',
+  `Three` int(11) DEFAULT '0',
+  `Four` int(11) DEFAULT '0',
+  `Five` int(11) DEFAULT '0',
+  `Six` int(11) DEFAULT '0',
+  `Seven` int(11) DEFAULT '0',
+  `Eight` int(11) DEFAULT '0',
+  `Present` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
