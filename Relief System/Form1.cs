@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Relief_System
 {
@@ -22,32 +25,44 @@ namespace Relief_System
             {
                 checkedListBox1.Items.Add(Program.al1[j]);
             }
-            Program.subarr = new int[Program.al1.Count];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Program.tname = textBox1.Text;
-            //Teacher.tadd();
-            // textBox1.Text = "";
-            for (int j = 0; j < Program.al1.Count; j++)
+            for (int j = 0; j < (Program.al1.Count - 12); j++)
             {
-                MessageBox.Show(Convert.ToString(Program.subarr[j]));
+                try
+                {
+                    Program.al2[j] = 0;
+                }
+                catch
+                {
+                    Program.al2.Add(0);
+                }
+                if (checkedListBox1.GetItemCheckState(j) == CheckState.Checked)
+                {
+                    try
+                    {
+                        Program.al2[j] = 1;
+                    }
+                    catch
+                    {
+                        Program.al2.Add(1);
+                    }
+                }
+            }
+            Teacher.tadd();
+            textBox1.Text = "";
+            for(int j=0; j<checkedListBox1.Items.Count; j++)
+            {
+                checkedListBox1.SetItemChecked(j, false);
             }
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (int cindex1 in checkedListBox1.CheckedIndices)
-            {
-                for (int j = 0; j < Program.al1.Count; j++)
-                {
-                    if (cindex1 == j)
-                    {
-                        Program.subarr[j] = 1;
-                    }
-                }
-            }
+            
         }
     }
 }

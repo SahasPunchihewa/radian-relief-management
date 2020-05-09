@@ -28,7 +28,18 @@ namespace Relief_System
             }
             try
             {
-                cmd.CommandText = "insert into teacher(No,Name) values('" + tno + "','" + tname + "')";
+                sqlcmd = "insert into teacher(No,Name";
+                for(i=12; i<al1.Count; i++)
+                {
+                    sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
+                }
+                sqlcmd=sqlcmd+") values('" + tno + "', '" + tname + "'";
+                for (i = 0; i < al2.Count; i++)
+                {
+                    sqlcmd = sqlcmd + "," + Convert.ToString(al2[i]);
+                }
+                sqlcmd = sqlcmd + ")";
+                cmd.CommandText = sqlcmd;
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
