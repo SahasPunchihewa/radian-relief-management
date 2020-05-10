@@ -178,7 +178,11 @@ namespace Relief_System
                         if(present==0)
                         {
                             testarr[i] = 0;
-                            randfound();
+                            /*randfoundsub();
+                            if(ransub==0)
+                            {*/
+                                randfound();
+                            //}
                         }
                     }
                 }
@@ -190,6 +194,148 @@ namespace Relief_System
             }
             r.Close();
         }
+        /*public static void randfoundsub()
+        {
+            ransub = 0;
+            r.Close();
+            if (i == 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 1)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Two=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 2)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Three=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 3)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Four=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 4)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Five=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 5)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Six=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 6)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Seven=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            if (i == 7)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Eight=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            r.NextResult();
+        }*/
         public static void randfound()
         {
             r.Close();

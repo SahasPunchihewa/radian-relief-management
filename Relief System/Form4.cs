@@ -28,6 +28,14 @@ namespace Relief_System
             Program.timearr[5] = Convert.ToInt32(textBox7.Text) + 1000;
             Program.timearr[6] = Convert.ToInt32(textBox8.Text) + 1000;
             Program.timearr[7] = Convert.ToInt32(textBox9.Text) + 1000;
+            Program.time2arr[0] = Convert.ToInt32(textBox10.Text) + 1000;
+            Program.time2arr[1] = Convert.ToInt32(textBox11.Text) + 1000;
+            Program.time2arr[2] = Convert.ToInt32(textBox12.Text) + 1000;
+            Program.time2arr[3] = Convert.ToInt32(textBox13.Text) + 1000;
+            Program.time2arr[4] = Convert.ToInt32(textBox14.Text) + 1000;
+            Program.time2arr[5] = Convert.ToInt32(textBox15.Text) + 1000;
+            Program.time2arr[6] = Convert.ToInt32(textBox16.Text) + 1000;
+            Program.time2arr[7] = Convert.ToInt32(textBox17.Text) + 1000;
             Timetable.timeadd();
             textBox1.Text = "";
             textBox2.Text = "";
@@ -38,6 +46,14 @@ namespace Relief_System
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
+            textBox17.Text = "";
         }
     }
 }

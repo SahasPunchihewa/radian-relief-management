@@ -21,7 +21,10 @@ namespace Relief_System
             InitializeComponent();
             Program.tno = 1001;
             checkedListBox1.Items.Clear();
-            for(int j=12;j<Program.al1.Count;j++)
+            Program.al1.Clear();
+            Program.al2.Clear();
+            Teacher.subload();
+            for (int j=12;j<Program.al1.Count;j++)
             {
                 checkedListBox1.Items.Add(Program.al1[j]);
             }

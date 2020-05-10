@@ -47,6 +47,14 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -214,7 +222,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(303, 478);
+            this.button1.Location = new System.Drawing.Point(565, 477);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 33);
             this.button1.TabIndex = 18;
@@ -222,11 +230,83 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(624, 60);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(216, 37);
+            this.textBox10.TabIndex = 19;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(624, 110);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(216, 37);
+            this.textBox11.TabIndex = 20;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(624, 160);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(216, 37);
+            this.textBox12.TabIndex = 21;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(624, 209);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(216, 37);
+            this.textBox13.TabIndex = 22;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(624, 259);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(216, 37);
+            this.textBox14.TabIndex = 23;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(624, 309);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(216, 37);
+            this.textBox15.TabIndex = 24;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Location = new System.Drawing.Point(624, 359);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(216, 37);
+            this.textBox16.TabIndex = 25;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.Location = new System.Drawing.Point(624, 410);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(216, 37);
+            this.textBox17.TabIndex = 26;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 523);
+            this.ClientSize = new System.Drawing.Size(871, 533);
+            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
@@ -274,5 +354,13 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
     }
 }

@@ -24,7 +24,7 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                r.Close();
             }
             try
             {
@@ -44,7 +44,7 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"MSG 22");
             }
         }
         public static void nameload()
