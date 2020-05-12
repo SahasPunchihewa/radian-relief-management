@@ -203,7 +203,13 @@ namespace Relief_System
                             randfoundsub();
                             if(ransub==0)
                             {
-                                randfound();
+                                MessageBox.Show("SUB "+i);
+                                randfoundclass();
+                                if(ransub==0)
+                                {
+                                    MessageBox.Show("null "+i);
+                                    randfound();
+                                }
                             }
                         }
                     }
@@ -233,7 +239,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+" I 0 ");
+                    MessageBox.Show(ex.Message+" I 0 1 ");
                 }
             }
             if (i == 1)
@@ -250,7 +256,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 1 ");
+                    MessageBox.Show(ex.Message + " I 1 2");
                 }
             }
             if (i == 2)
@@ -267,7 +273,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 2 ");
+                    MessageBox.Show(ex.Message + " I 2 3");
                 }
             }
             if (i == 3)
@@ -284,7 +290,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 3 ");
+                    MessageBox.Show(ex.Message + " I 3 4");
                 }
             }
             if (i == 4)
@@ -301,7 +307,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 4 ");
+                    MessageBox.Show(ex.Message + " I 4 5");
                 }
             }
             if (i == 5)
@@ -318,7 +324,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 5 ");
+                    MessageBox.Show(ex.Message + " I 5 6");
                 }
             }
             if (i == 6)
@@ -335,7 +341,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 6 ");
+                    MessageBox.Show(ex.Message + " I 6 7");
                 }
             }
             if (i == 7)
@@ -343,6 +349,147 @@ namespace Relief_System
                 try
                 {
                     cmd.CommandText = "SELECT No FROM `teacher` WHERE Present=1 AND Eight=0  AND " + subarr[(tsubarr[i]-1000)] + "=1 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 7 8");
+                }
+            }
+            r.NextResult();
+        }
+        public static void randfoundclass()
+        {
+            ransub = 0;
+            if (i == 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno+ " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 0 ");
+                }
+            }
+            if (i == 1)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 1 ");
+                }
+            }
+            if (i == 2)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 2 ");
+                }
+            }
+            if (i == 3)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 3 ");
+                }
+            }
+            if (i == 4)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 4 ");
+                }
+            }
+            if (i == 5)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 5 ");
+                }
+            }
+            if (i == 6)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        reliefarr[i] = r.GetInt32(0);
+                        ransub = 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " I 6 ");
+                }
+            }
+            if (i == 7)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
