@@ -20,7 +20,7 @@ namespace Relief_System
                 }
                 r.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 r.Close();
             }
