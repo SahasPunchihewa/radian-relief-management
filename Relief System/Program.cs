@@ -25,6 +25,7 @@ namespace Relief_System
         public static int[] newt = new int[8];
         public static ArrayList al1,al2,al3;
         public static String[] subarr;
+        public static String[] time = new string[8];
 
         /// <summary>
         /// The main entry point for the application.
@@ -32,8 +33,15 @@ namespace Relief_System
 
         public Program()
         {
-            
-            for(i=0;i<8;i++)
+            time[0] = "One";
+            time[1] = "Two";
+            time[2] = "Three";
+            time[3] = "Four";
+            time[4] = "Five";
+            time[5] = "Six";
+            time[6] = "Seven";
+            time[7] = "Eight";
+            for (i=0;i<8;i++)
             {
                 reliefarr[i] = 0;
             }

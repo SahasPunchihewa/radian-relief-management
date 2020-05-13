@@ -762,5 +762,20 @@ namespace Relief_System
                 }
             }
         }
+        public static void teacherclear()
+        {
+            for(i=0; i<8; i++)
+            {
+                try
+                {
+                    cmd.CommandText = "update teacher set "+time[i]+"=0 where "+time[i]+"='" + (classno + 1000) + "'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex2)
+                {
+                    MessageBox.Show(ex2.Message);
+                }
+            }
+        }
     }
 }
