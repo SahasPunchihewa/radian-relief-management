@@ -67,5 +67,11 @@ namespace Relief_System
         {
             
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.nic = textBox2.Text;
+            Teacher.teacherload();
+            textBox1.Text = Program.tname;
+        }
     }
 }

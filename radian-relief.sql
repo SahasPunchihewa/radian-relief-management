@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2020 at 07:20 PM
+-- Generation Time: May 13, 2020 at 07:22 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -57,6 +57,7 @@ CREATE TABLE `subject` (
 CREATE TABLE `teacher` (
   `No` int(11) NOT NULL,
   `Name` text NOT NULL,
+  `NIC` text,
   `Section` text,
   `One` int(11) DEFAULT '0',
   `Two` int(11) DEFAULT '0',

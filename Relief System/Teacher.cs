@@ -93,5 +93,22 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }
         }
+        public static void teacherload()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM `teacher` WHERE NIC="+nic;
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    tname = r.GetString("Name");
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
