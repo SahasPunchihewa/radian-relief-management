@@ -24,6 +24,9 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Relief.resetter();
+            Relief.classload();
+            Relief.teachertime();
 
             Relief.timeget();
             Relief.abscheck();

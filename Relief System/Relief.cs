@@ -203,11 +203,9 @@ namespace Relief_System
                             randfoundsub();
                             if(ransub==0)
                             {
-                                MessageBox.Show("SUB "+i);
                                 randfoundclass();
                                 if(ransub==0)
                                 {
-                                    MessageBox.Show("null "+i);
                                     randfound();
                                 }
                             }
@@ -365,12 +363,13 @@ namespace Relief_System
         }
         public static void randfoundclass()
         {
+            r.Close();
             ransub = 0;
             if (i == 0)
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno+ " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno+ " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -387,7 +386,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Two=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -404,7 +403,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Three=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -421,7 +420,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Four=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -438,7 +437,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Five=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -455,7 +454,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Six=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -472,7 +471,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Seven=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -489,7 +488,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + "OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND One=0 ORDER BY RAND() LIMIT 1";
+                    cmd.CommandText = "SELECT No,Name FROM `teacher` WHERE (One=" + classno + " OR Two=" + classno + " OR Three=" + classno + " OR Four=" + classno + " OR Five=" + classno + " OR Six=" + classno + " OR Seven=" + classno + " OR Eight=" + classno + ") And Present=1 AND Eight=0 ORDER BY RAND() LIMIT 1";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -747,14 +746,14 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno+1000 + (date * 10)) + "','" + classname + "','" + newt[0] + "','" + newt[1] + "','" + newt[2] + "','" + newt[3] + "','" + newt[4] + "','" + newt[5] + "','" + newt[6] + "','" + newt[7] + "')";
+                cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno+1000) + "','" + classname + "','" + newt[0] + "','" + newt[1] + "','" + newt[2] + "','" + newt[3] + "','" + newt[4] + "','" + newt[5] + "','" + newt[6] + "','" + newt[7] + "')";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception)
             {
                 try
                 {
-                    cmd.CommandText = "update class set One='" + newt[0] + "',Two='" + newt[1] + "',Three='" + newt[2] + "',Four='" + newt[3] + "',Five='" + newt[4] + "',Six='" + newt[5] + "',Seven='" + newt[6] + "',Eight='" + newt[0] + "' where No='" + (classno + 1000 + (date * 10))+"'";
+                    cmd.CommandText = "update class set One='" + newt[0] + "',Two='" + newt[1] + "',Three='" + newt[2] + "',Four='" + newt[3] + "',Five='" + newt[4] + "',Six='" + newt[5] + "',Seven='" + newt[6] + "',Eight='" + newt[0] + "' where No='" + (classno + 1000)+"'";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex2)
