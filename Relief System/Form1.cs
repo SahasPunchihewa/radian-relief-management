@@ -24,7 +24,7 @@ namespace Relief_System
             Program.al1.Clear();
             Program.al2.Clear();
             Teacher.subload();
-            for (int j=12;j<Program.al1.Count;j++)
+            for (int j=13;j<Program.al1.Count;j++)
             {
                 checkedListBox1.Items.Add(Program.al1[j]);
             }
@@ -33,7 +33,7 @@ namespace Relief_System
         private void button1_Click(object sender, EventArgs e)
         {
             Program.tname = textBox1.Text;
-            for (int j = 0; j < (Program.al1.Count - 12); j++)
+            for (int j = 0; j < (Program.al1.Count - 13); j++)
             {
                 try
                 {
@@ -72,6 +72,13 @@ namespace Relief_System
             Program.nic = textBox2.Text;
             Teacher.teacherload();
             textBox1.Text = Program.tname;
+            for(int j=0;j<Program.al3.Count; j++)
+            {
+                if (Convert.ToInt32(Program.al3[j])==1)
+                {
+                    checkedListBox1.SetItemCheckState(j,CheckState.Checked);
+                }
+            }
         }
     }
 }

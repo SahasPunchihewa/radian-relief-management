@@ -95,6 +95,7 @@ namespace Relief_System
         }
         public static void teacherload()
         {
+            al3.Clear();
             try
             {
                 cmd.CommandText = "SELECT * FROM `teacher` WHERE NIC="+nic;
@@ -102,6 +103,10 @@ namespace Relief_System
                 while (r.Read())
                 {
                     tname = r.GetString("Name");
+                    for (i = 13; i<al1.Count; i++)
+                    {
+                        al3.Add(r.GetInt32(Convert.ToString(al1[i])));
+                    }
                 }
                 r.Close();
             }
