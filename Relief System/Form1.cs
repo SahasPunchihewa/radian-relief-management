@@ -138,5 +138,23 @@ namespace Relief_System
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Program.tname = "";
+            Program.nic = "";
+            Program.secno = 0;
+            for (int j = 0; j < checkedListBox1.Items.Count; j++)
+            {
+                checkedListBox1.SetItemChecked(j, false);
+            }
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
     }
 }

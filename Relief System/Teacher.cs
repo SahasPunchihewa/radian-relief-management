@@ -201,5 +201,17 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }
         }
+        public static void teacherdelete()
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM `teacher` WHERE No="+tno+"";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 245");
+            }
+        }
     }
 }
