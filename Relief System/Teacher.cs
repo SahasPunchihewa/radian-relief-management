@@ -10,42 +10,83 @@ namespace Relief_System
 {
     public class Teacher:Program
     {
+        public static void nicchecked()
+        {
+            niccheck = 0;
+            try
+            {
+                cmd.CommandText = "SELECT * FROM teacher where NIC="+nic;
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    niccheck = 1;
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                r.Close();
+            }
+        }
         public static void tadd()
         {
-            try
+            if(niccheck==0)
             {
-                cmd.CommandText = "SELECT MAX(No) FROM teacher";
-                r = cmd.ExecuteReader();
-                while(r.Read())
+                try
                 {
-                    tno = r.GetInt32(0) + 1;
+                    cmd.CommandText = "SELECT MAX(No) FROM teacher";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        tno = r.GetInt32(0) + 1;
+                    }
+                    r.Close();
                 }
-                r.Close();
-            }
-            catch(Exception)
-            {
-                r.Close();
-            }
-            try
-            {
-                sqlcmd = "insert into teacher(No,Name";
-                for(i=12; i<al1.Count; i++)
+                catch (Exception)
                 {
-                    sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
+                    r.Close();
                 }
-                sqlcmd=sqlcmd+") values('" + tno + "', '" + tname + "'";
-                for (i = 0; i < al2.Count; i++)
+                try
                 {
-                    sqlcmd = sqlcmd + "," + Convert.ToString(al2[i]);
+                    sqlcmd = "insert into teacher(No,Name,NIC";
+                    for (i = 13; i < al1.Count; i++)
+                    {
+                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
+                    }
+                    sqlcmd = sqlcmd + ") values('" + tno + "', '" + tname + "','" + nic + "'";
+                    for (i = 0; i < al2.Count; i++)
+                    {
+                        sqlcmd = sqlcmd + "," + Convert.ToString(al2[i]);
+                    }
+                    sqlcmd = sqlcmd + ")";
+                    cmd.CommandText = sqlcmd;
+                    cmd.ExecuteNonQuery();
                 }
-                sqlcmd = sqlcmd + ")";
-                cmd.CommandText = sqlcmd;
-                cmd.ExecuteNonQuery();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "MSG 22");
+                }
             }
-            catch(Exception ex)
+            if(niccheck==1)
             {
-                MessageBox.Show(ex.Message+"MSG 22");
+                try
+                {
+                   sqlcmd = "update teacher set Name='"+tname+"',NIC="+nic+"";
+                    for (i = 13; i < al1.Count; i++)
+                    {
+                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i])+"="+Convert.ToString(al2[i-13]);
+                    }
+                    sqlcmd = sqlcmd + " where No="+tno;
+                    cmd.CommandText = sqlcmd;
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(sqlcmd);
+                    MessageBox.Show(ex.Message + "MSG 23");
+                }
             }
+            
         }
         public static void nameload()
         {
@@ -103,6 +144,7 @@ namespace Relief_System
                 while (r.Read())
                 {
                     tname = r.GetString("Name");
+                    tno = r.GetInt32("No");
                     for (i = 13; i<al1.Count; i++)
                     {
                         al3.Add(r.GetInt32(Convert.ToString(al1[i])));
