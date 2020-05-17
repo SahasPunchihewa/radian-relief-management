@@ -45,5 +45,11 @@ namespace Relief_System
             Form5 f5 = new Form5();
             f5.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.ShowDialog();
+        }
     }
 }

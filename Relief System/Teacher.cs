@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace Relief_System
 {
-    public class Teacher:Program
+    public class Teacher : Program
     {
         public static void nicchecked()
         {
             niccheck = 0;
             try
             {
-                cmd.CommandText = "SELECT * FROM teacher where NIC="+nic;
+                cmd.CommandText = "SELECT * FROM teacher where NIC=" + nic;
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -30,7 +30,7 @@ namespace Relief_System
         }
         public static void tadd()
         {
-            if(niccheck==0)
+            if (niccheck == 0)
             {
                 try
                 {
@@ -48,12 +48,12 @@ namespace Relief_System
                 }
                 try
                 {
-                    sqlcmd = "insert into teacher(No,Name,NIC";
+                    sqlcmd = "insert into teacher(No,Name,NIC,Section";
                     for (i = 13; i < al1.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
                     }
-                    sqlcmd = sqlcmd + ") values('" + tno + "', '" + tname + "','" + nic + "'";
+                    sqlcmd = sqlcmd + ") values('" + tno + "', '" + tname + "','" + nic + "','"+secno+"'";
                     for (i = 0; i < al2.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al2[i]);
@@ -67,16 +67,16 @@ namespace Relief_System
                     MessageBox.Show(ex.Message + "MSG 22");
                 }
             }
-            if(niccheck==1)
+            if (niccheck == 1)
             {
                 try
                 {
-                   sqlcmd = "update teacher set Name='"+tname+"',NIC="+nic+"";
+                    sqlcmd = "update teacher set Name='" + tname + "',NIC=" + nic + ",Section="+secno+"";
                     for (i = 13; i < al1.Count; i++)
                     {
-                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i])+"="+Convert.ToString(al2[i-13]);
+                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]) + "=" + Convert.ToString(al2[i - 13]);
                     }
-                    sqlcmd = sqlcmd + " where No="+tno;
+                    sqlcmd = sqlcmd + " where No=" + tno;
                     cmd.CommandText = sqlcmd;
                     cmd.ExecuteNonQuery();
                 }
@@ -86,13 +86,13 @@ namespace Relief_System
                     MessageBox.Show(ex.Message + "MSG 23");
                 }
             }
-            
+
         }
         public static void nameload()
         {
             try
             {
-                cmd.CommandText = "SELECT Name FROM teacher where No='"+tno+"'";
+                cmd.CommandText = "SELECT Name FROM teacher where No='" + tno + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -109,7 +109,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "update teacher SET Present = '"+present+"'where No = '"+tno+"'";
+                cmd.CommandText = "update teacher SET Present = '" + present + "'where No = '" + tno + "'";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -139,16 +139,60 @@ namespace Relief_System
             al3.Clear();
             try
             {
-                cmd.CommandText = "SELECT * FROM `teacher` WHERE NIC="+nic;
+                cmd.CommandText = "SELECT * FROM `teacher` WHERE NIC='" + nic+"'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
                     tname = r.GetString("Name");
                     tno = r.GetInt32("No");
-                    for (i = 13; i<al1.Count; i++)
+                    secno = r.GetInt32("Section");
+                    for (i = 13; i < al1.Count; i++)
                     {
                         al3.Add(r.GetInt32(Convert.ToString(al1[i])));
                     }
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot Find Any Record For "+nic+" For NIC");
+            }
+        }
+        public static void secadder()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT MAX(No) FROM section";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    secno = r.GetInt32(0) + 1;
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                r.Close();
+            }
+            try
+            {
+                cmd.CommandText = "insert into section(No,Name) values('" + secno + "', '" + sec + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 24");
+            }
+        }
+        public static void secload()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT Name FROM `section`";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    al4.Add(r.GetString(0));
                 }
                 r.Close();
             }

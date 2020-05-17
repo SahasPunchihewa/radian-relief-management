@@ -23,15 +23,20 @@ namespace Relief_System
             checkedListBox1.Items.Clear();
             Program.al1.Clear();
             Program.al2.Clear();
+            Program.al4.Clear();
+            Program.al4.Add("- Select One -");
+            Teacher.secload();
             Teacher.subload();
             for (int j=13;j<Program.al1.Count;j++)
             {
                 checkedListBox1.Items.Add(Program.al1[j]);
             }
+            comboBox1.DataSource = Program.al4;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Program.checktest = 0;
             Teacher.nicchecked();
             Program.tname = textBox1.Text;
             Program.nic = textBox2.Text;
@@ -47,6 +52,7 @@ namespace Relief_System
                 }
                 if (checkedListBox1.GetItemCheckState(j) == CheckState.Checked)
                 {
+                    Program.checktest = 1;
                     try
                     {
                         Program.al2[j] = 1;
@@ -57,47 +63,77 @@ namespace Relief_System
                     }
                 }
             }
-            Teacher.tadd();
-            Program.tname = "";
-            Program.tno = 0;
-            Program.nic = "";
-            textBox1.Text = "";
-            textBox2.Text = "";
-            for (int j=0; j<checkedListBox1.Items.Count; j++)
+            Program.secno=comboBox1.SelectedIndex;
+            if(textBox1.Text.Equals(""))
             {
-                checkedListBox1.SetItemChecked(j, false);
+                MessageBox.Show("Please Enter Teacher Name !");
+            }
+            else if(textBox2.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter NIC !");
+            }
+            else if(Program.secno==0)
+            {
+                MessageBox.Show("Please Select a Section !");
+            }
+            else if (Program.checktest==0)
+            {
+                MessageBox.Show("Please Select Atleast One Subject !");
+            }
+            else
+            {
+                Teacher.tadd();
+                Program.tname = "";
+                Program.tno = 0;
+                Program.nic = "";
+                textBox1.Text = "";
+                textBox2.Text = "";
+                for (int j = 0; j < checkedListBox1.Items.Count; j++)
+                {
+                    checkedListBox1.SetItemChecked(j, false);
+                }
             }
         }
-
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.nic = textBox2.Text;
-            Teacher.teacherload();
-            textBox1.Text = Program.tname;
-            for(int j=0;j<Program.al3.Count; j++)
+            if(textBox2.Text.Equals(""))
             {
-                try
+                MessageBox.Show("Please Enter NIC");
+            }
+            else
+            {
+                if(comboBox1.SelectedIndex!=0)
                 {
-                    Program.al2[j] = 0;
+                    Program.secno = comboBox1.SelectedIndex;
                 }
-                catch
+                Program.nic = textBox2.Text;
+                Teacher.teacherload();
+                textBox1.Text = Program.tname;
+                for (int j = 0; j < Program.al3.Count; j++)
                 {
-                    Program.al2.Add(0);
-                }
-                if (Convert.ToInt32(Program.al3[j])==1)
-                {
-                    checkedListBox1.SetItemCheckState(j,CheckState.Checked);
                     try
                     {
-                        Program.al2[j] = 1;
+                        Program.al2[j] = 0;
                     }
                     catch
                     {
-                        Program.al2.Add(1);
+                        Program.al2.Add(0);
+                    }
+                    if (Convert.ToInt32(Program.al3[j]) == 1)
+                    {
+                        checkedListBox1.SetItemCheckState(j, CheckState.Checked);
+                        try
+                        {
+                            Program.al2[j] = 1;
+                        }
+                        catch
+                        {
+                            Program.al2.Add(1);
+                        }
                     }
                 }
             }
