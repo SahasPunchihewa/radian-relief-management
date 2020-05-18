@@ -15,7 +15,7 @@ namespace Relief_System
             niccheck = 0;
             try
             {
-                cmd.CommandText = "SELECT * FROM teacher where NIC=" + nic;
+                cmd.CommandText = "SELECT * FROM teacher where TeacherID=" + tid;
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -48,12 +48,12 @@ namespace Relief_System
                 }
                 try
                 {
-                    sqlcmd = "insert into teacher(No,Name,NIC,Section";
+                    sqlcmd = "insert into teacher(No,Name,TeacherID,Section,TPNo";
                     for (i = 13; i < al1.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
                     }
-                    sqlcmd = sqlcmd + ") values('" + tno + "', '" + tname + "','" + nic + "','"+secno+"'";
+                    sqlcmd = sqlcmd + ") values('" + tno + "', '" + tname + "','" + tid + "','"+secno+"','"+tpno+"'";
                     for (i = 0; i < al2.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al2[i]);
@@ -71,7 +71,7 @@ namespace Relief_System
             {
                 try
                 {
-                    sqlcmd = "update teacher set Name='" + tname + "',NIC=" + nic + ",Section="+secno+"";
+                    sqlcmd = "update teacher set Name='" + tname + "',TeacherID=" + tid + ",Section="+secno+",TPNo='"+tpno+"'";
                     for (i = 13; i < al1.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]) + "=" + Convert.ToString(al2[i - 13]);
@@ -82,11 +82,9 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(sqlcmd);
                     MessageBox.Show(ex.Message + "MSG 23");
                 }
             }
-
         }
         public static void nameload()
         {
@@ -139,13 +137,14 @@ namespace Relief_System
             al3.Clear();
             try
             {
-                cmd.CommandText = "SELECT * FROM `teacher` WHERE NIC='" + nic+"'";
+                cmd.CommandText = "SELECT * FROM `teacher` WHERE TeacherID='"+tid+"'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
                     tname = r.GetString("Name");
                     tno = r.GetInt32("No");
                     secno = r.GetInt32("Section");
+                    tpno = r.GetString("TPNo");
                     for (i = 13; i < al1.Count; i++)
                     {
                         al3.Add(r.GetInt32(Convert.ToString(al1[i])));
@@ -155,7 +154,7 @@ namespace Relief_System
             }
             catch (Exception)
             {
-                MessageBox.Show("Cannot Find Any Record For "+nic+" For NIC");
+                MessageBox.Show("Cannot Find Any Record For "+tid+" For TeacherID");
             }
         }
         public static void secadder()
@@ -203,6 +202,7 @@ namespace Relief_System
         }
         public static void teacherdelete()
         {
+            maxno = 0;
             try
             {
                 cmd.CommandText = "DELETE FROM `teacher` WHERE No="+tno+"";
@@ -212,6 +212,33 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message + "MSG 245");
             }
+            try
+            {
+                cmd.CommandText = "SELECT MAX(No) FROM teacher";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    maxno = r.GetInt32(0);
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                r.Close();
+            }
+            if((maxno!=tno)&&(maxno!=0))
+            {
+                try
+                {
+                    cmd.CommandText = "update teacher SET No = '" + tno + "'where No = '" + maxno + "'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message+"MSG 456");
+                }
+            }
+            maxno = 0;
         }
     }
 }

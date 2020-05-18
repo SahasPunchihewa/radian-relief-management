@@ -38,8 +38,9 @@ namespace Relief_System
         {
             Program.checktest = 0;
             Teacher.nicchecked();
-            Program.tname = textBox1.Text;
-            Program.nic = textBox2.Text;
+            Program.tname = textBox2.Text;
+            Program.tid = textBox1.Text;
+            Program.tpno = textBox3.Text;
             for (int j = 0; j < (Program.al1.Count - 13); j++)
             {
                 try
@@ -64,17 +65,21 @@ namespace Relief_System
                 }
             }
             Program.secno=comboBox1.SelectedIndex;
-            if(textBox1.Text.Equals(""))
+            if (textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter Teacher ID !");
+            }
+            else if (textBox2.Text.Equals(""))
             {
                 MessageBox.Show("Please Enter Teacher Name !");
-            }
-            else if(textBox2.Text.Equals(""))
-            {
-                MessageBox.Show("Please Enter NIC !");
             }
             else if(Program.secno==0)
             {
                 MessageBox.Show("Please Select a Section !");
+            }
+            else if(textBox3.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter Telephone Number !");
             }
             else if (Program.checktest==0)
             {
@@ -85,9 +90,11 @@ namespace Relief_System
                 Teacher.tadd();
                 Program.tname = "";
                 Program.tno = 0;
-                Program.nic = "";
+                Program.tid = "";
+                Program.tpno = "";
                 textBox1.Text = "";
                 textBox2.Text = "";
+                textBox3.Text = "";
                 for (int j = 0; j < checkedListBox1.Items.Count; j++)
                 {
                     checkedListBox1.SetItemChecked(j, false);
@@ -100,9 +107,9 @@ namespace Relief_System
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text.Equals(""))
+            if(textBox1.Text.Equals(""))
             {
-                MessageBox.Show("Please Enter NIC");
+                MessageBox.Show("Please Enter Teacher ID");
             }
             else
             {
@@ -110,9 +117,10 @@ namespace Relief_System
                 {
                     Program.secno = comboBox1.SelectedIndex;
                 }
-                Program.nic = textBox2.Text;
+                Program.tid = textBox1.Text;
                 Teacher.teacherload();
-                textBox1.Text = Program.tname;
+                textBox2.Text = Program.tname;
+                textBox3.Text = Program.tpno;
                 for (int j = 0; j < Program.al3.Count; j++)
                 {
                     try
@@ -141,20 +149,27 @@ namespace Relief_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Teacher.teacherdelete();
+            tclear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            tclear();
+        }
+        public void tclear()
+        {
             Program.tname = "";
-            Program.nic = "";
+            Program.tid = "";
             Program.secno = 0;
+            Program.tpno = "";
             for (int j = 0; j < checkedListBox1.Items.Count; j++)
             {
                 checkedListBox1.SetItemChecked(j, false);
             }
             textBox1.Text = "";
             textBox2.Text = "";
+            textBox3.Text = "";
         }
     }
 }
