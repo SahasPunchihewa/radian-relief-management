@@ -44,5 +44,113 @@ namespace Relief_System
                 MessageBox.Show(ex.Message+"MSG 3");
             }
         }
+        public static void subupdate()
+        {
+            try
+            {
+                cmd.CommandText = "update subject SET Name = '" + subname + "'where No = '" + subno + "'";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 45678");
+            }
+            try
+            {
+                cmd.CommandText = "ALTER TABLE `teacher` CHANGE " + oldsub + " " + subname + " INT(11) NULL DEFAULT NULL";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 45679");
+            }
+        }
+        public static void oldsubget()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT Name FROM subject where No='" + subno + "'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    oldsub = r.GetString(0);
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message +"999");
+            }
+        }
+        public static void subfind()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT Name FROM subject where No='"+subno+"'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    subname = r.GetString(0);
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot Find Any Record For " + subno);
+            }
+        }
+        public static void maxfindsub()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT MAX(No) FROM subject";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    maxsub = r.GetInt32(0);
+                }
+                r.Close();
+            }
+            catch (Exception)
+            {
+                r.Close();
+            }
+        }
+        public static void subdelete()
+        {
+            maxsub = 0;
+            try
+            {
+                cmd.CommandText = "DELETE FROM `subject` WHERE No=" + subno + "";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 2456");
+            }
+            try
+            {
+                cmd.CommandText = "ALTER TABLE `teacher` DROP "+subname+"";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 2457");
+            }
+            maxfindsub();
+            if ((maxsub != subno) && (maxsub != 0))
+            {
+                try
+                {
+                    cmd.CommandText = "update subject SET No = '" + subno + "'where No = '" + maxsub + "'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "MSG 4567");
+                }
+            }
+            maxsub = 0;
+        }
     }
 }
