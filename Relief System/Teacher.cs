@@ -90,11 +90,30 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT Name FROM teacher where No='" + tno + "'";
+                cmd.CommandText = "SELECT * FROM teacher where No='" + tno + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
-                    tname = r.GetString(0);
+                    tname = r.GetString("Name");
+                    tid = r.GetString("TeacherID");
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static void nameloadtid()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM teacher where TeacherID='" + tid + "'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    tname = r.GetString("Name");
+                    tno = r.GetInt32("No");
                 }
                 r.Close();
             }
@@ -200,18 +219,8 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }
         }
-        public static void teacherdelete()
+        public static void maxfind()
         {
-            maxno = 0;
-            try
-            {
-                cmd.CommandText = "DELETE FROM `teacher` WHERE No="+tno+"";
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "MSG 245");
-            }
             try
             {
                 cmd.CommandText = "SELECT MAX(No) FROM teacher";
@@ -226,6 +235,20 @@ namespace Relief_System
             {
                 r.Close();
             }
+        }
+        public static void teacherdelete()
+        {
+            maxno = 0;
+            try
+            {
+                cmd.CommandText = "DELETE FROM `teacher` WHERE No="+tno+"";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 245");
+            }
+            maxfind();
             if((maxno!=tno)&&(maxno!=0))
             {
                 try
