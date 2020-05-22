@@ -49,7 +49,7 @@ namespace Relief_System
                 try
                 {
                     sqlcmd = "insert into teacher(No,Name,TeacherID,Section,TPNo";
-                    for (i = 13; i < al1.Count; i++)
+                    for (i = 14; i < al1.Count; i++)
                     {
                         sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]);
                     }
@@ -72,9 +72,9 @@ namespace Relief_System
                 try
                 {
                     sqlcmd = "update teacher set Name='" + tname + "',TeacherID=" + tid + ",Section="+secno+",TPNo='"+tpno+"'";
-                    for (i = 13; i < al1.Count; i++)
+                    for (i = 14; i < al1.Count; i++)
                     {
-                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]) + "=" + Convert.ToString(al2[i - 13]);
+                        sqlcmd = sqlcmd + "," + Convert.ToString(al1[i]) + "=" + Convert.ToString(al2[i - 14]);
                     }
                     sqlcmd = sqlcmd + " where No=" + tno;
                     cmd.CommandText = sqlcmd;
@@ -164,7 +164,7 @@ namespace Relief_System
                     tno = r.GetInt32("No");
                     secno = r.GetInt32("Section");
                     tpno = r.GetString("TPNo");
-                    for (i = 13; i < al1.Count; i++)
+                    for (i = 14; i < al1.Count; i++)
                     {
                         al3.Add(r.GetInt32(Convert.ToString(al1[i])));
                     }

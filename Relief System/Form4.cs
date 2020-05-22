@@ -55,5 +55,14 @@ namespace Relief_System
             textBox16.Text = "";
             textBox17.Text = "";
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox2.Text.Length==4)
+            {
+                MessageBox.Show("retrr");
+            }
+            
+        }
     }
 }

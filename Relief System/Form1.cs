@@ -27,7 +27,7 @@ namespace Relief_System
             Program.al4.Add("- Select One -");
             Teacher.secload();
             Teacher.subload();
-            for (int j=13;j<Program.al1.Count;j++)
+            for (int j=14;j<Program.al1.Count;j++)
             {
                 checkedListBox1.Items.Add(Program.al1[j]);
             }
@@ -41,7 +41,7 @@ namespace Relief_System
             Program.tname = textBox2.Text;
             Program.tid = textBox1.Text;
             Program.tpno = textBox3.Text;
-            for (int j = 0; j < (Program.al1.Count - 13); j++)
+            for (int j = 0; j < (Program.al1.Count - 14); j++)
             {
                 try
                 {
