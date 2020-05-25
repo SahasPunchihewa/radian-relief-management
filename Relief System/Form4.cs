@@ -19,6 +19,7 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Timetable.cnamecheck();
             Program.classname = textBox1.Text;
             Program.tindex[0] = comboBox1.SelectedIndex;
             Program.tindex[1] = comboBox2.SelectedIndex;
@@ -46,6 +47,7 @@ namespace Relief_System
             comboBox6.DataSource = null;
             comboBox7.DataSource = null;
             comboBox8.DataSource = null;
+            Program.classname = "";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -246,6 +248,22 @@ namespace Relief_System
             Program.tn6.Add(Program.tnames[5]);
             Program.tn7.Add(Program.tnames[6]);
             Program.tn8.Add(Program.tnames[7]);
+            Program.t1.Clear();
+            Program.t2.Clear();
+            Program.t3.Clear();
+            Program.t4.Clear();
+            Program.t5.Clear();
+            Program.t6.Clear();
+            Program.t7.Clear();
+            Program.t8.Clear();
+            Program.t1.Add(Program.time2arr[0]);
+            Program.t2.Add(Program.time2arr[1]);
+            Program.t3.Add(Program.time2arr[2]);
+            Program.t4.Add(Program.time2arr[3]);
+            Program.t5.Add(Program.time2arr[4]);
+            Program.t6.Add(Program.time2arr[5]);
+            Program.t7.Add(Program.time2arr[6]);
+            Program.t8.Add(Program.time2arr[7]);
             comboBox1.DataSource = Program.tn1;
             comboBox2.DataSource = Program.tn2;
             comboBox3.DataSource = Program.tn3;
