@@ -116,5 +116,68 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }
         }
+        public static void timesearch()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM `class` where Name='" + classname + "' AND No<2000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    classno = r.GetInt32("No");
+                    time2arr[0] = r.GetInt32("One");
+                    time2arr[1] = r.GetInt32("Two");
+                    time2arr[2] = r.GetInt32("Three");
+                    time2arr[3] = r.GetInt32("Four");
+                    time2arr[4] = r.GetInt32("Five");
+                    time2arr[5] = r.GetInt32("Six");
+                    time2arr[6] = r.GetInt32("Seven");
+                    time2arr[7] = r.GetInt32("Eight");
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                cmd.CommandText = "SELECT * FROM `class` where Name='" + classname + "' AND No>3000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    timearr[0] = r.GetInt32("One");
+                    timearr[1] = r.GetInt32("Two");
+                    timearr[2] = r.GetInt32("Three");
+                    timearr[3] = r.GetInt32("Four");
+                    timearr[4] = r.GetInt32("Five");
+                    timearr[5] = r.GetInt32("Six");
+                    timearr[6] = r.GetInt32("Seven");
+                    timearr[7] = r.GetInt32("Eight");
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            for(i=0; i<8; i++)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT Name FROM `teacher` where No='" + time2arr[i] + "'";
+                    r = cmd.ExecuteReader();
+                    while (r.Read())
+                    {
+                        tnames[i] = r.GetString(0);
+                    }
+                    r.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace Relief_System
         public static ArrayList tn1, tn2, tn3, tn4, tn5, tn6, tn7, tn8;
         public static String[] subarr;
         public static String[] time = new string[8];
+        public static String[] tnames = new string[8];
 
         /// <summary>
         /// The main entry point for the application.
