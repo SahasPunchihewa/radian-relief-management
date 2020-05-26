@@ -294,5 +294,26 @@ namespace Relief_System
                 }
             }
         }
+        public static void timedelete()
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM `class` WHERE Name = '"+classname+"'";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                cmd.CommandText = "UPDATE `teacher` SET One = 0 WHERE One ='" + classno + "'; UPDATE `teacher` SET Two = 0 WHERE Two ='" + classno + "'; UPDATE `teacher` SET Three = 0 WHERE Three ='" + classno + "'; UPDATE `teacher` SET Four = 0 WHERE Four ='" + classno + "'; UPDATE `teacher` SET Five = 0 WHERE Five ='" + classno + "'; UPDATE `teacher` SET Six = 0 WHERE Six ='" + classno + "'; UPDATE `teacher` SET Seven = 0 WHERE Seven ='" + classno + "'; UPDATE `teacher` SET Eight = 0 WHERE Eight ='" + classno + "';";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

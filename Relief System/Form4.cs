@@ -273,7 +273,11 @@ namespace Relief_System
             comboBox7.DataSource = Program.tn7;
             comboBox8.DataSource = Program.tn8;
         }
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Timetable.timedelete();
+            clear();
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             clear();
