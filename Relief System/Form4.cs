@@ -273,5 +273,47 @@ namespace Relief_System
             comboBox7.DataSource = Program.tn7;
             comboBox8.DataSource = Program.tn8;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+        public void clear()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            comboBox1.DataSource = null;
+            comboBox2.DataSource = null;
+            comboBox3.DataSource = null;
+            comboBox4.DataSource = null;
+            comboBox5.DataSource = null;
+            comboBox6.DataSource = null;
+            comboBox7.DataSource = null;
+            comboBox8.DataSource = null;
+            Program.t1.Clear();
+            Program.t2.Clear();
+            Program.t3.Clear();
+            Program.t4.Clear();
+            Program.t5.Clear();
+            Program.t6.Clear();
+            Program.t7.Clear();
+            Program.t8.Clear();
+            Program.tn1.Clear();
+            Program.tn2.Clear();
+            Program.tn3.Clear();
+            Program.tn4.Clear();
+            Program.tn5.Clear();
+            Program.tn6.Clear();
+            Program.tn7.Clear();
+            Program.tn8.Clear();
+            Program.classname = "";
+        }
     }
 }

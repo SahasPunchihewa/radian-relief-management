@@ -232,6 +232,7 @@ namespace Relief_System
         }
         public static void timesearch()
         {
+            classno = 0;
             try
             {
                 cmd.CommandText = "SELECT * FROM `class` where Name='" + classname + "' AND No<2000";
