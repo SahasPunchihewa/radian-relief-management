@@ -56,11 +56,12 @@ namespace Relief_System
             {
                 Program.timearr[0] = Convert.ToInt32(textBox2.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox2.Text) + 1000;
-                Program.t1.Clear();
-                Program.tn1.Clear();
                 Program.timet = "One";
                 Timetable.subnameload();
+                Program.t1.Clear();
+                Program.tn1.Clear();
                 Timetable.tloadone();
+                comboBox1.DataSource = null;
                 comboBox1.DataSource = Program.tn1;
             }
             catch(Exception)
@@ -76,11 +77,13 @@ namespace Relief_System
             {
                 Program.timearr[1] = Convert.ToInt32(textBox3.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox3.Text) + 1000;
-                Program.t2.Clear();
-                Program.tn2.Clear();
                 Program.timet = "Two";
                 Timetable.subnameload();
+                Program.t2.Clear();
+                Program.tn2.Clear();
                 Timetable.tloadone();
+                MessageBox.Show("MSG");
+                comboBox2.DataSource = null;
                 comboBox2.DataSource = Program.tn2;
             }
             catch (Exception)
@@ -96,11 +99,12 @@ namespace Relief_System
             {
                 Program.timearr[2] = Convert.ToInt32(textBox4.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox4.Text) + 1000;
-                Program.t3.Clear();
-                Program.tn3.Clear();
                 Program.timet = "Three";
                 Timetable.subnameload();
+                Program.t3.Clear();
+                Program.tn3.Clear();
                 Timetable.tloadone();
+                comboBox3.DataSource = null;
                 comboBox3.DataSource = Program.tn3;
             }
             catch (Exception)
@@ -112,16 +116,16 @@ namespace Relief_System
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
             try
             {
                 Program.timearr[3] = Convert.ToInt32(textBox5.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox5.Text) + 1000;
-                Program.t4.Clear();
-                Program.tn4.Clear();
                 Program.timet = "Four";
                 Timetable.subnameload();
+                Program.t4.Clear();
+                Program.tn4.Clear();
                 Timetable.tloadone();
+                comboBox4.DataSource = null;
                 comboBox4.DataSource = Program.tn4;
             }
             catch (Exception)
@@ -137,11 +141,12 @@ namespace Relief_System
             {
                 Program.timearr[4] = Convert.ToInt32(textBox6.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox6.Text) + 1000;
-                Program.t5.Clear();
-                Program.tn5.Clear();
                 Program.timet = "Five";
                 Timetable.subnameload();
+                Program.t5.Clear();
+                Program.tn5.Clear();
                 Timetable.tloadone();
+                comboBox5.DataSource = null;
                 comboBox5.DataSource = Program.tn5;
             }
             catch (Exception)
@@ -157,11 +162,12 @@ namespace Relief_System
             {
                 Program.timearr[5] = Convert.ToInt32(textBox7.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox7.Text) + 1000;
-                Program.t6.Clear();
-                Program.tn6.Clear();
                 Program.timet = "Six";
                 Timetable.subnameload();
+                Program.t6.Clear();
+                Program.tn6.Clear();
                 Timetable.tloadone();
+                comboBox6.DataSource = null;
                 comboBox6.DataSource = Program.tn6;
             }
             catch (Exception)
@@ -177,11 +183,12 @@ namespace Relief_System
             {
                 Program.timearr[6] = Convert.ToInt32(textBox8.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox8.Text) + 1000;
-                Program.t7.Clear();
-                Program.tn7.Clear();
                 Program.timet = "Seven";
                 Timetable.subnameload();
+                Program.t7.Clear();
+                Program.tn7.Clear();
                 Timetable.tloadone();
+                comboBox7.DataSource = null;
                 comboBox7.DataSource = Program.tn7;
             }
             catch (Exception)
@@ -197,11 +204,12 @@ namespace Relief_System
             {
                 Program.timearr[7] = Convert.ToInt32(textBox9.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox9.Text) + 1000;
-                Program.t8.Clear();
-                Program.tn8.Clear();
                 Program.timet = "Eight";
                 Timetable.subnameload();
+                Program.t8.Clear();
+                Program.tn8.Clear();
                 Timetable.tloadone();
+                comboBox8.DataSource = null;
                 comboBox8.DataSource = Program.tn8;
             }
             catch (Exception)

@@ -182,7 +182,7 @@ namespace Relief_System
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
-                    if(timet.Equals("One"))
+                    if (timet.Equals("One"))
                     {
                         t1.Add(r.GetString("No"));
                         tn1.Add(r.GetString("Name"));
