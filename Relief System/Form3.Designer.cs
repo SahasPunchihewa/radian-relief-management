@@ -51,18 +51,17 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(208, 25);
-            this.textBox1.Multiline = true;
+            this.textBox1.Location = new System.Drawing.Point(208, 26);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 28);
+            this.textBox1.Size = new System.Drawing.Size(215, 27);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(94, 136);
+            this.button1.Location = new System.Drawing.Point(93, 144);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 41);
+            this.button1.Size = new System.Drawing.Size(104, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,9 +81,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 25);
+            this.label2.Location = new System.Drawing.Point(31, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 28);
+            this.label2.Size = new System.Drawing.Size(140, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "Subject No";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,17 +92,16 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(208, 74);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 28);
+            this.textBox2.Size = new System.Drawing.Size(317, 27);
             this.textBox2.TabIndex = 5;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(231, 136);
+            this.button3.Location = new System.Drawing.Point(232, 144);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 41);
+            this.button3.Size = new System.Drawing.Size(104, 28);
             this.button3.TabIndex = 6;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -112,9 +110,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(364, 136);
+            this.button4.Location = new System.Drawing.Point(372, 144);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 41);
+            this.button4.Size = new System.Drawing.Size(104, 28);
             this.button4.TabIndex = 7;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
@@ -136,6 +134,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subject";
             this.ResumeLayout(false);
             this.PerformLayout();
