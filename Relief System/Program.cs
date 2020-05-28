@@ -14,7 +14,8 @@ namespace Relief_System
         public static MySqlConnection con;
         public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0,date,ransub=0,subcount=0,niccheck=0,secno=0,checktest=0,maxno=0,maxsub=0;
-        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub;
+        public static int nameup = 0;
+        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8];
         public static int[] time2arr = new int[8];
@@ -23,9 +24,13 @@ namespace Relief_System
         public static int[] reliefarr = new int[8];
         public static int[] tarr = new int[8];
         public static int[] newt = new int[8];
+        public static int[] tindex = new int[8];
         public static ArrayList al1,al2,al3,al4;
+        public static ArrayList t1, t2, t3, t4, t5, t6, t7, t8;
+        public static ArrayList tn1, tn2, tn3, tn4, tn5, tn6, tn7, tn8;
         public static String[] subarr;
         public static String[] time = new string[8];
+        public static String[] tnames = new string[8];
 
         /// <summary>
         /// The main entry point for the application.
@@ -46,7 +51,7 @@ namespace Relief_System
                 reliefarr[i] = 0;
             }
             db.dbase();
-            try
+            /*try
             {
                 cmd.CommandText = "UPDATE `teacher` SET `One`=0,`Two`=0,`Three`=0,`Four`=0,`Five`=0,`Six`=0,`Seven`=0,`Eight`=0";
                 cmd.ExecuteNonQuery();
@@ -54,12 +59,28 @@ namespace Relief_System
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
             date = Convert.ToInt32(DateTime.Now.ToString("dd"));
             al1 = new ArrayList();
             al2 = new ArrayList();
             al3 = new ArrayList();
             al4 = new ArrayList();
+            t1 = new ArrayList();
+            t2 = new ArrayList();
+            t3 = new ArrayList();
+            t4 = new ArrayList();
+            t5 = new ArrayList();
+            t6 = new ArrayList();
+            t7 = new ArrayList();
+            t8 = new ArrayList();
+            tn1 = new ArrayList();
+            tn2 = new ArrayList();
+            tn3 = new ArrayList();
+            tn4 = new ArrayList();
+            tn5 = new ArrayList();
+            tn6 = new ArrayList();
+            tn7 = new ArrayList();
+            tn8 = new ArrayList();
             try
             {
                 cmd.CommandText = "SELECT COUNT(No) FROM subject";
