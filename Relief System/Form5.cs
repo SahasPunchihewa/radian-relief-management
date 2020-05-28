@@ -19,7 +19,7 @@ namespace Relief_System
             Relief.resetter();
             Relief.classload();
             Relief.teachertime();
-            label1.Text = Program.classname;
+            textBox1.Text = Program.classname;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace Relief_System
             Relief.resetter();
             Relief.classload();
             Relief.teachertime();
-            label1.Text = Program.classname;
+            textBox1.Text = Program.classname;
         }
     }
 }
