@@ -777,5 +777,22 @@ namespace Relief_System
                 }
             }
         }
+        public static void timetablesearch()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT No FROM `class` WHERE Name='"+classname+"' AND No<2000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    classno= r.GetInt32(0);
+                    clzno = r.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -139,5 +139,14 @@ namespace Relief_System
             Relief.teachertime();
             textBox1.Text = Program.classname;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.classname = textBox1.Text;
+            Relief.timetablesearch();
+            Relief.resetter();
+            Relief.classload();
+            Relief.teachertime();
+        }
     }
 }
