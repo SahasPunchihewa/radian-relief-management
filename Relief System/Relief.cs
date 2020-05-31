@@ -54,8 +54,9 @@ namespace Relief_System
                 }
                 r.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 r.Close();
             }
         }
@@ -745,6 +746,23 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public static void classmax()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT MAX(No) FROM `class` WHERE No<2000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    maxclz = r.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            r.Close();
         }
     }
 }

@@ -61,6 +61,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +76,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(126, 92);
+            this.button1.Location = new System.Drawing.Point(209, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 27);
             this.button1.TabIndex = 1;
@@ -267,7 +268,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(290, 92);
+            this.button2.Location = new System.Drawing.Point(361, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 27);
             this.button2.TabIndex = 20;
@@ -396,11 +397,23 @@
             this.label29.Text = "Relief";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(57, 102);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(146, 27);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "Previous";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 448);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
@@ -476,5 +489,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button4;
     }
 }
