@@ -263,5 +263,23 @@ namespace Relief_System
             }
             maxno = 0;
         }
+        public static void secsearch()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT No FROM section where Name='"+sec+"'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    secno = r.GetInt32(0);
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                r.Close();
+            }
+        }
     }
 }

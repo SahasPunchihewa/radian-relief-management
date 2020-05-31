@@ -22,6 +22,13 @@ namespace Relief_System
             Program.sec = textBox1.Text;
             Teacher.secadder();
             textBox1.Text = "";
+            Program.sec = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.sec = textBox1.Text;
+            Teacher.secsearch();
         }
     }
 }
