@@ -19,16 +19,41 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Teacher.seccheck();
             Program.sec = textBox1.Text;
-            Teacher.secadder();
+            if (Program.secc==1)
+            {
+                Teacher.secupdate();
+            }
+            else
+            {
+                Teacher.secadder();
+            }
             textBox1.Text = "";
+            label2.Text = "";
             Program.sec = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.sec = textBox1.Text;
-            Teacher.secsearch();
+            label2.Text = "";
+            if (textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a Name To Search !");
+            }
+            else
+            {
+                Program.sec = textBox1.Text;
+                Teacher.secsearch();
+                if(Program.secno==0)
+                {
+                    MessageBox.Show("Cannot Find Any Record For Section Name " + Program.sec);
+                }
+                else
+                {
+                    label2.Text="Record Found, You can Edit Section Name";
+                }
+            }
         }
     }
 }

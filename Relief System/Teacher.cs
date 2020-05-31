@@ -265,6 +265,7 @@ namespace Relief_System
         }
         public static void secsearch()
         {
+            secno = 0;
             try
             {
                 cmd.CommandText = "SELECT No FROM section where Name='"+sec+"'";
@@ -279,6 +280,37 @@ namespace Relief_System
             {
                 Console.WriteLine(ex.Message);
                 r.Close();
+            }
+        }
+        public static void seccheck()
+        {
+            secc = 0;
+            try
+            {
+                cmd.CommandText = "SELECT No FROM section where Name='" + sec + "'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    secc = 1;
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                r.Close();
+            }
+        }
+        public static void secupdate()
+        {
+            try
+            {
+                cmd.CommandText = "update section SET Name='" +sec+ "'where No = '" + secno + "'";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 2984");
             }
         }
     }
