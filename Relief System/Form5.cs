@@ -19,7 +19,55 @@ namespace Relief_System
             Relief.resetter();
             Relief.classload();
             Relief.teachertime();
+            Relief.redsubshow();
+            for(int j=0;j<8;j++)
+            {
+                if (Program.redsub[j]==0)
+                {
+                    Console.WriteLine(j);
+                    if (j == 0)
+                    {
+                        label20.ForeColor = Color.Red;
+                    }
+                    if (j == 1)
+                    {
+                        label21.ForeColor = Color.Red;
+                    }
+                    if (j == 2)
+                    {
+                        label22.ForeColor = Color.Red;
+                    }
+                    if (j == 3)
+                    {
+                        label23.ForeColor = Color.Red;
+                    }
+                    if (j == 4)
+                    {
+                        label24.ForeColor = Color.Red;
+                    }
+                    if (j == 5)
+                    {
+                        label25.ForeColor = Color.Red;
+                    }
+                    if (j == 6)
+                    {
+                        label26.ForeColor = Color.Red;
+                    }
+                    if (j == 7)
+                    {
+                        label27.ForeColor = Color.Red;
+                    }
+                }
+            }
             textBox1.Text = Program.classname;
+            label20.Text = Convert.ToString(Program.tarr[0]);
+            label21.Text = Convert.ToString(Program.tarr[1]);
+            label22.Text = Convert.ToString(Program.tarr[2]);
+            label23.Text = Convert.ToString(Program.tarr[3]);
+            label24.Text = Convert.ToString(Program.tarr[4]);
+            label25.Text = Convert.ToString(Program.tarr[5]);
+            label26.Text = Convert.ToString(Program.tarr[6]);
+            label27.Text = Convert.ToString(Program.tarr[7]);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +75,14 @@ namespace Relief_System
             Relief.teacherclear();
             Relief.timeget();
             Relief.abscheck();
+            label12.ForeColor = Color.Black;
+            label13.ForeColor = Color.Black;
+            label14.ForeColor = Color.Black;
+            label15.ForeColor = Color.Black;
+            label16.ForeColor = Color.Black;
+            label17.ForeColor = Color.Black;
+            label18.ForeColor = Color.Black;
+            label19.ForeColor = Color.Black;
             for (int j = 0;j< 8;j++)
             {
                 if(Program.testarr[j]!=0)
@@ -71,42 +127,42 @@ namespace Relief_System
                     if (j == 0)
                     {
                         label12.Text = Convert.ToString(Program.reliefarr[j]);
-                        label12.ForeColor = Color.Red;
+                        label12.ForeColor = Color.Blue;
                     }
                     if (j == 1)
                     {
                         label13.Text = Convert.ToString(Program.reliefarr[j]);
-                        label13.ForeColor = Color.Red;
+                        label13.ForeColor = Color.Blue;
                     }
                     if (j == 2)
                     {
                         label14.Text = Convert.ToString(Program.reliefarr[j]);
-                        label14.ForeColor = Color.Red;
+                        label14.ForeColor = Color.Blue;
                     }
                     if (j == 3)
                     {
                         label15.Text = Convert.ToString(Program.reliefarr[j]);
-                        label15.ForeColor = Color.Red;
+                        label15.ForeColor = Color.Blue;
                     }
                     if (j == 4)
                     {
                         label16.Text = Convert.ToString(Program.reliefarr[j]);
-                        label16.ForeColor = Color.Red;
+                        label16.ForeColor = Color.Blue;
                     }
                     if (j == 5)
                     {
                         label17.Text = Convert.ToString(Program.reliefarr[j]);
-                        label17.ForeColor = Color.Red;
+                        label17.ForeColor = Color.Blue;
                     }
                     if (j == 6)
                     {
                         label18.Text = Convert.ToString(Program.reliefarr[j]);
-                        label18.ForeColor = Color.Red;
+                        label18.ForeColor = Color.Blue;
                     }
                     if (j == 7)
                     {
                         label19.Text = Convert.ToString(Program.reliefarr[j]);
-                        label19.ForeColor = Color.Red;
+                        label19.ForeColor = Color.Blue;
                     }
                 }
                 Relief.trelupdater();

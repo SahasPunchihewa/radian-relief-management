@@ -6,21 +6,20 @@ using System.Windows.Forms;
 
 namespace Relief_System
 {
-    class Relief:Program
+    class Relief : Program
     {
         public static void resetter()
         {
-            for(i=0;i<8;i++)
+            for (i = 0; i < 8; i++)
             {
-                timearr[i]= 0;
-                testarr[i]= 0;
-                reliefarr[i]= 0;
-                tarr[i]= 0;
+                timearr[i] = 0;
+                testarr[i] = 0;
+                reliefarr[i] = 0;
+                tarr[i] = 0;
             }
         }
         public static void teachertime()
         {
-            ca = 0;
             try
             {
                 cmd.CommandText = "SELECT * FROM class where No='" + clzno + "'";
@@ -35,92 +34,13 @@ namespace Relief_System
                     tarr[5] = r.GetInt32("Six");
                     tarr[6] = r.GetInt32("Seven");
                     tarr[7] = r.GetInt32("Eight");
-                    ca = 1;
-                    
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+" MSG 1");
+                MessageBox.Show(ex.Message + " MSG 1");
             }
             r.Close();
-            if (ca == 1)
-            {
-                try
-                {
-                    cmd.CommandText = "update teacher set One='" + clzno + "' where No='" + tarr[0] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Two='" + clzno + "' where No='" + tarr[1] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Three='" + clzno + "' where No='" + tarr[2] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Four='" + clzno + "' where No='" + tarr[3] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Five='" + clzno + "' where No='" + tarr[4] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Six='" + clzno + "' where No='" + tarr[5] + "'";
-                    cmd .ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Seven='" + clzno + "' where No='" + tarr[6] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                try
-                {
-                    cmd.CommandText = "update teacher set Eight='" + clzno + "' where No='" + tarr[7] + "'";
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                clzno++;
-                teachertime();
-            }
         }
         public static void classload()
         {
@@ -183,6 +103,29 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message + " MSG 33");
             }
+        }
+        public static void redsubshow()
+        {
+            for(i=0;i<8;i++)
+            {
+               
+                try
+                {
+                    cmd.CommandText = "SELECT Present FROM teacher where No='" + tarr[i] + "'";
+                    r = cmd.ExecuteReader();
+                    
+                    while (r.Read())
+                    {
+                        redsub[i] = r.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                r.Close();
+            }
+
         }
         public static void abscheck()
         {

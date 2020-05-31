@@ -17,14 +17,8 @@ namespace Relief_System
         public static int nameup = 0;
         public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet;
         public static MySqlDataReader r;
-        public static int[] timearr = new int[8];
-        public static int[] time2arr = new int[8];
-        public static int[] tsubarr = new int[8];
-        public static int[] testarr = new int[8];
-        public static int[] reliefarr = new int[8];
-        public static int[] tarr = new int[8];
-        public static int[] newt = new int[8];
-        public static int[] tindex = new int[8];
+        public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8];
+        public static int[] reliefarr = new int[8],tarr = new int[8],newt = new int[8],tindex = new int[8];
         public static ArrayList al1,al2,al3,al4;
         public static ArrayList t1, t2, t3, t4, t5, t6, t7, t8;
         public static ArrayList tn1, tn2, tn3, tn4, tn5, tn6, tn7, tn8;
