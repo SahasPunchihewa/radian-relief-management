@@ -41,7 +41,7 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(54, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 136);
+            this.button1.Size = new System.Drawing.Size(136, 135);
             this.button1.TabIndex = 0;
             this.button1.Text = "Teacher Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(197, 49);
+            this.button2.Location = new System.Drawing.Point(196, 49);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 136);
+            this.button2.Size = new System.Drawing.Size(136, 135);
             this.button2.TabIndex = 1;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(339, 49);
+            this.button3.Location = new System.Drawing.Point(338, 49);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 136);
+            this.button3.Size = new System.Drawing.Size(136, 135);
             this.button3.TabIndex = 2;
             this.button3.Text = "Subject Add";
             this.button3.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(54, 191);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 136);
+            this.button4.Size = new System.Drawing.Size(136, 135);
             this.button4.TabIndex = 3;
             this.button4.Text = "Timetable Add";
             this.button4.UseVisualStyleBackColor = true;
@@ -83,9 +83,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(339, 191);
+            this.button5.Location = new System.Drawing.Point(338, 191);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 136);
+            this.button5.Size = new System.Drawing.Size(136, 135);
             this.button5.TabIndex = 4;
             this.button5.Text = "Relief";
             this.button5.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(197, 192);
+            this.button6.Location = new System.Drawing.Point(196, 192);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(136, 135);
             this.button6.TabIndex = 5;
@@ -113,8 +113,12 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Switch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Switch";
+            this.Load += new System.EventHandler(this.Switch_Load);
             this.ResumeLayout(false);
 
         }

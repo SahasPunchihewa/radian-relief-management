@@ -51,5 +51,10 @@ namespace Relief_System
             Form6 f6 = new Form6();
             f6.ShowDialog();
         }
+
+        private void Switch_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
