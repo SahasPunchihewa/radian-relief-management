@@ -45,7 +45,7 @@ namespace Relief_System
                 reliefarr[i] = 0;
             }
             db.dbase();
-            try
+            /*try
             {
                 cmd.CommandText = "UPDATE `teacher` SET One = 0 WHERE One> 2000; UPDATE `teacher` SET Two = 0 WHERE Two> 2000; UPDATE `teacher` SET Three = 0 WHERE Three> 2000; UPDATE `teacher` SET Four = 0 WHERE Four> 2000; UPDATE `teacher` SET Five = 0 WHERE Five> 2000; UPDATE `teacher` SET Six = 0 WHERE Six> 2000; UPDATE `teacher` SET Seven = 0 WHERE Seven> 2000; UPDATE `teacher` SET Eight = 0 WHERE Eight> 2000;";
                 cmd.ExecuteNonQuery();
@@ -53,7 +53,7 @@ namespace Relief_System
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
             date = Convert.ToInt32(DateTime.Now.ToString("dd"));
             al1 = new ArrayList();
             al2 = new ArrayList();
