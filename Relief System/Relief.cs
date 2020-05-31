@@ -719,6 +719,15 @@ namespace Relief_System
                     MessageBox.Show(ex2.Message);
                 }
             }
+            try
+            {
+                cmd.CommandText = "DELETE FROM `class` WHERE NO ='"+(classno+1000)+"'";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex2)
+            {
+                MessageBox.Show(ex2.Message);
+            }
         }
         public static void timetablesearch()
         {
