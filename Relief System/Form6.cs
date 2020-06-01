@@ -55,5 +55,14 @@ namespace Relief_System
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.sec = textBox1.Text;
+            Teacher.secdelete();
+            textBox1.Text = "";
+            label2.Text = "";
+            Program.sec = "";
+        }
     }
 }

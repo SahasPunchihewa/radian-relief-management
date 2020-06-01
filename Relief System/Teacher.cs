@@ -313,5 +313,17 @@ namespace Relief_System
                 MessageBox.Show(ex.Message + "MSG 2984");
             }
         }
+        public static void secdelete()
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM `section` WHERE Name ='"+sec+"'";
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "MSG 2784");
+            }
+        }
     }
 }
