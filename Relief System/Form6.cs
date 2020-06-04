@@ -64,5 +64,12 @@ namespace Relief_System
             label2.Text = "";
             Program.sec = "";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            label2.Text = "";
+            Program.sec = "";
+        }
     }
 }
