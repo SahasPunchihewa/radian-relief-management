@@ -376,5 +376,31 @@ namespace Relief_System
                 trelp[i] = 0;
             }
         }
+        public static void relsearch()
+        {
+            tno = 0;
+            try
+            {
+                cmd.CommandText = "SELECT No FROM `teacher` WHERE TeacherID ='" +tid+ "'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    tno = r.GetInt32(0);
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if(tno==0)
+            {
+                MessageBox.Show("Please Enter Valied Teacher ID !");
+            }
+            else
+            {
+                relindex = al5.IndexOf(tno);
+            }
+        }
     }
 }

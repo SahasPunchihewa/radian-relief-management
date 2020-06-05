@@ -14,6 +14,7 @@ namespace Relief_System
         public Form7()
         {
             InitializeComponent();
+            labelclear();
             Program.relindex = 0;
             shower();
             button1.Hide();
@@ -98,15 +99,26 @@ namespace Relief_System
         }
         public void labelclear()
         {
-            label12.Text = "";
-            label13.Text = "";
-            label14.Text = "";
-            label15.Text = "";
-            label16.Text = "";
-            label17.Text = "";
-            label18.Text = "";
-            label19.Text = "";
+            label12.Text = "-";
+            label13.Text = "-";
+            label14.Text = "-";
+            label15.Text = "-";
+            label16.Text = "-";
+            label17.Text = "-";
+            label18.Text = "-";
+            label19.Text = "-";
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.tid = textBox1.Text;
+            Teacher.relsearch();
+            shower();
+            button2.Show();
+            if (Program.relindex == 0)
+            {
+                button1.Hide();
+            }
+        }
     }
 }
