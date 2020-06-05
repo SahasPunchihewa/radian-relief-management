@@ -14,18 +14,18 @@ namespace Relief_System
         public Form7()
         {
             InitializeComponent();
+            Program.relindex = 0;
+            shower();
+            button1.Hide();
         }
 
         private void Form7_Load(object sender, EventArgs e)
         {
-            Teacher.clear7();
-            Teacher.loadrel();
-            Teacher.reltime();
-            labelseter();
-
+            
         }
         public void labelseter()
         {
+            label1.Text = "Relief For " + Program.al6[Program.relindex];
             for(int j=0;j<8;j++)
             {
                 if(Program.trelp[j]>2000)
@@ -65,5 +65,48 @@ namespace Relief_System
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.relindex++;
+            shower();
+            button1.Show();
+            if(Program.relindex==(Program.al5.Count-1))
+            {
+                button2.Hide();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.relindex--;
+            shower();
+            button2.Show();
+            if(Program.relindex==0)
+            {
+                button1.Hide();
+            }
+        }
+        public void shower()
+        {
+            Teacher.clear7();
+            labelclear();
+            Teacher.loadrel();
+            Teacher.reltime();
+            labelseter();
+        }
+        public void labelclear()
+        {
+            label12.Text = "";
+            label13.Text = "";
+            label14.Text = "";
+            label15.Text = "";
+            label16.Text = "";
+            label17.Text = "";
+            label18.Text = "";
+            label19.Text = "";
+        }
+
     }
 }

@@ -347,7 +347,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM `teacher` WHERE No ='"+al5[0]+"'";
+                cmd.CommandText = "SELECT * FROM `teacher` WHERE No ='"+al5[relindex]+"'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {

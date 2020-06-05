@@ -14,7 +14,7 @@ namespace Relief_System
         public static MySqlConnection con;
         public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0,date,ransub=0,subcount=0,niccheck=0,secno=0,checktest=0,maxno=0,maxsub=0;
-        public static int nameup = 0,maxclz=0,secc=0;
+        public static int nameup = 0,maxclz=0,secc=0,relindex;
         public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8];
