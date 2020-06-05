@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Relief_System
 {
@@ -25,6 +26,7 @@ namespace Relief_System
         public static String[] subarr;
         public static String[] time = new string[8];
         public static String[] tnames = new string[8];
+        public static StreamWriter sw;
 
         /// <summary>
         /// The main entry point for the application.
@@ -78,6 +80,7 @@ namespace Relief_System
             tn6 = new ArrayList();
             tn7 = new ArrayList();
             tn8 = new ArrayList();
+
             try
             {
                 cmd.CommandText = "SELECT COUNT(No) FROM subject";
