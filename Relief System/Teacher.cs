@@ -325,5 +325,56 @@ namespace Relief_System
                 MessageBox.Show(ex.Message + "MSG 2784");
             }
         }
+        public static void loadrel()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM teacher WHERE One > 2000 OR Two> 2000 OR Three> 2000 OR Four> 2000 OR Five> 2000 OR Six> 2000 OR Seven> 2000 OR Eight> 2000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    al5.Add(r.GetInt32("No"));
+                    al6.Add(r.GetString("Name"));
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static void reltime()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM `teacher` WHERE No ='"+al5[0]+"'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    trelp[0] = r.GetInt32("One");
+                    trelp[1] = r.GetInt32("Two");
+                    trelp[2] = r.GetInt32("Three");
+                    trelp[3] = r.GetInt32("Four");
+                    trelp[4] = r.GetInt32("Five");
+                    trelp[5] = r.GetInt32("Six");
+                    trelp[6] = r.GetInt32("Seven");
+                    trelp[7] = r.GetInt32("Eight");
+                }
+                r.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static void clear7()
+        {
+            Program.al5.Clear();
+            Program.al6.Clear();
+            for(i=0;i<8;i++)
+            {
+                trelp[i] = 0;
+            }
+        }
     }
 }

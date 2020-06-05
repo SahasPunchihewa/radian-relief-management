@@ -15,6 +15,10 @@ namespace Relief_System
         {
             InitializeComponent();
         }
+        private void Switch_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,10 +55,10 @@ namespace Relief_System
             Form6 f6 = new Form6();
             f6.ShowDialog();
         }
-
-        private void Switch_Load(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-
+            Form7 f7 = new Form7();
+            f7.ShowDialog();
         }
     }
 }
