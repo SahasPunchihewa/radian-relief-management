@@ -123,6 +123,15 @@ namespace Relief_System
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Program.relprinter[0] = label12.Text;
+            Program.relprinter[1] = label13.Text;
+            Program.relprinter[2] = label14.Text;
+            Program.relprinter[3] = label15.Text;
+            Program.relprinter[4] = label16.Text;
+            Program.relprinter[5] = label17.Text;
+            Program.relprinter[6] = label18.Text;
+            Program.relprinter[7] = label19.Text;
+            Program.textname = label1.Text;
             TextPrint.relwrite();
             TextPrint.reliefprint();
         }

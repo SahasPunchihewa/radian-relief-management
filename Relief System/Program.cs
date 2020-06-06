@@ -18,7 +18,7 @@ namespace Relief_System
         public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0,ransub=0,subcount=0,niccheck=0,secno=0,checktest=0,maxno=0,maxsub=0;
         public static int nameup = 0,maxclz=0,secc=0,relindex;
-        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet,date,reltext,path,dir;
+        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet,date,reltext,path,dir,textname;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8];
         public static int[] reliefarr = new int[8],tarr = new int[8],newt = new int[8],tindex = new int[8],relload=new int[8],trelp=new int[8];
@@ -26,8 +26,7 @@ namespace Relief_System
         public static ArrayList t1, t2, t3, t4, t5, t6, t7, t8;
         public static ArrayList tn1, tn2, tn3, tn4, tn5, tn6, tn7, tn8;
         public static String[] subarr;
-        public static String[] time = new string[8];
-        public static String[] tnames = new string[8];
+        public static String[] time = new string[8],relprinter = new string[8],tnames = new string[8];
         public static StreamWriter sw;
         public static PrintDialog pd;
         public static ProcessStartInfo info;
