@@ -120,7 +120,7 @@
       <DependentUpon>Switch.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs" />
-    <Compile Include="textprint.cs" />
+    <Compile Include="TextPrint.cs" />
     <Compile Include="Timetable.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

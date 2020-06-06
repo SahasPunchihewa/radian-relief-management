@@ -120,5 +120,11 @@ namespace Relief_System
                 button1.Hide();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TextPrint.relwrite();
+            TextPrint.reliefprint();
+        }
     }
 }

@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Diagnostics;
+using System.Threading;
 
 namespace Relief_System
 {
@@ -16,7 +18,7 @@ namespace Relief_System
         public static MySqlCommand cmd;
         public static int tno,present=0,subno,classno=0,rtmp,i,clzno,ca=0,ransub=0,subcount=0,niccheck=0,secno=0,checktest=0,maxno=0,maxsub=0;
         public static int nameup = 0,maxclz=0,secc=0,relindex;
-        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet,date,reltext;
+        public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet,date,reltext,path,dir;
         public static MySqlDataReader r;
         public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8];
         public static int[] reliefarr = new int[8],tarr = new int[8],newt = new int[8],tindex = new int[8],relload=new int[8],trelp=new int[8];
@@ -27,6 +29,9 @@ namespace Relief_System
         public static String[] time = new string[8];
         public static String[] tnames = new string[8];
         public static StreamWriter sw;
+        public static PrintDialog pd;
+        public static ProcessStartInfo info;
+        public static Process pp;
 
         /// <summary>
         /// The main entry point for the application.
@@ -34,6 +39,13 @@ namespace Relief_System
 
         public Program()
         {
+
+            dir = @"C:\Users\Public\Documents\RadianLabs\ReliefText";
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
             time[0] = "One";
             time[1] = "Two";
             time[2] = "Three";
@@ -58,9 +70,9 @@ namespace Relief_System
                 MessageBox.Show(ex.Message);
             }*/
             date = DateTime.Now.ToString("yyyy.MM.dd");
-
-            textprint.relwrite();
-
+            pd = new PrintDialog();
+            pp = new Process();
+            
             al1 = new ArrayList();
             al2 = new ArrayList();
             al3 = new ArrayList();
