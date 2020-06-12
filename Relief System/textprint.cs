@@ -5,6 +5,11 @@ using System.Text;
 using System.IO;
 using System.Diagnostics;
 using System.Threading;
+using Spire.Pdf;
+using Spire.Pdf.Widget;
+using Spire.Pdf.Fields;
+using Spire.Pdf.HtmlConverter;
+using System.Drawing;
 
 namespace Relief_System
 {
@@ -19,6 +24,24 @@ namespace Relief_System
             sw.WriteLine(reltext);
             sw.Flush();
             sw.Close();
+            convertpdf();
+        }
+        public static void convertpdf()
+        {
+            PdfDocument pdfd = new PdfDocument();
+            PdfPageSettings settings = new PdfPageSettings();
+            settings.Size = new SizeF(1000, 1000);
+            settings.Margins = new Spire.Pdf.Graphics.PdfMargins(20);
+            PdfHtmlLayoutFormat htmll = new PdfHtmlLayoutFormat();
+            htmll.IsWaiting = true;
+            Thread thread = new Thread(()=>
+            { pdfd.LoadFromHTML(path, false, false, false, settings, htmll); });
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
+            pdfd.SaveToFile(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-1003_Date-" + date + "_Relief.pdf");
+            pdfd.Close();
+            System.Diagnostics.Process.Start(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-1003_Date-" + date + "_Relief.pdf");
         }
         public static void reliefprint()
         {
@@ -31,7 +54,7 @@ namespace Relief_System
                     {
                         Verb = "print",
                         CreateNoWindow = true,
-                        FileName = path,
+                        FileName = @"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-1003_Date-" + date + "_Relief.pdf",
                         WindowStyle = ProcessWindowStyle.Hidden
                     };
                     pp.StartInfo = info;

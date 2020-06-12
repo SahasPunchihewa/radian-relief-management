@@ -15,3 +15,7 @@ C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System
 C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form5.resources
 C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form6.resources
 C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Form7.resources
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Spire.Pdf.dll
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Spire.License.dll
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Spire.Pdf.xml
+C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Spire.License.xml

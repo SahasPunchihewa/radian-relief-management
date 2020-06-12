@@ -52,6 +52,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\e-iceblue\Spire.Pdf\Bin\NET4.0\Spire.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
