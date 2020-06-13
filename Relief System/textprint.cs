@@ -40,6 +40,7 @@ namespace Relief_System
             thread.Join();
             pdfd.SaveToFile(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-"+al5[relindex]+"_Date-" + date + "_Relief.pdf");
             pdfd.Close();
+            File.Delete(path);
             //System.Diagnostics.Process.Start(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-1003_Date-" + date + "_Relief.pdf");
         }
         public static void reliefprint()
