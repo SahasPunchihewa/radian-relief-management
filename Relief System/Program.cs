@@ -9,6 +9,10 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Diagnostics;
 using System.Threading;
+using Spire.Pdf;
+using Spire.Pdf.Widget;
+using Spire.Pdf.Fields;
+using Spire.Pdf.HtmlConverter;
 
 namespace Relief_System
 {
@@ -31,6 +35,10 @@ namespace Relief_System
         public static PrintDialog pd;
         public static ProcessStartInfo info;
         public static Process pp;
+        
+       
+        
+            
 
         /// <summary>
         /// The main entry point for the application.

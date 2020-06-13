@@ -133,7 +133,9 @@ namespace Relief_System
             Program.relprinter[7] = label19.Text;
             Program.textname = label1.Text;
             TextPrint.relwrite();
+            TextPrint.convertpdf();
             TextPrint.reliefprint();
+            
         }
     }
 }
