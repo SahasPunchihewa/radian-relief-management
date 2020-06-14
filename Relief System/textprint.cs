@@ -10,38 +10,71 @@ using Spire.Pdf.Widget;
 using Spire.Pdf.Fields;
 using Spire.Pdf.HtmlConverter;
 using System.Drawing;
+using Spire.Pdf.Graphics;
+using Spire.Pdf.Tables;
+
 
 namespace Relief_System
 {
     class TextPrint:Program
     {
-        public static void relwrite()
+
+        public static void pdfsettings()
         {
-            path = @"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-" + al5[relindex] + "_Date-" + date + "_Relief.html";
-            Console.WriteLine(path);
-            sw = new StreamWriter(path);
-            reltext = "<!doctype html><html><head><style>th{text-align: center;background-color: aqua;}td{text-align: center;}</style><meta charset='utf-8'><title>Relief</title></head><body><b><font face='Century Gothic'><h2 align=center>"+textname+"</h2><table align=center border='1' width ='400px' cellspacing='0' cellpadding='5'><tr><th>Period</th><th>Class</th></tr><tr><td>One</td><td>"+relprinter[0]+"</td></tr><tr><td>Two</td><td>" + relprinter[1] + "</td></tr><tr><td>Three</td><td>" + relprinter[2] + "</td></tr><tr><td>Four</td><td>" + relprinter[3] + "</td></tr><tr><td>Five</td><td>" + relprinter[4] + "</td></tr><tr><td>Six</td><td>" + relprinter[5] + "</td></tr><tr><td>Seven</td><td>" + relprinter[6] + "</td></tr><tr><td>Eight</td><td>" + relprinter[7] + "</td></tr></table></font></b></body></html>";
-            sw.WriteLine(reltext);
-            sw.Flush();
-            sw.Close();
-        }
-        public static void convertpdf()
-        {
-            PdfDocument pdfd = new PdfDocument();
-            PdfPageSettings settings = new PdfPageSettings();
-            PdfHtmlLayoutFormat htmll = new PdfHtmlLayoutFormat();
-            settings.Size = new SizeF(1000, 1000);
-            settings.Margins = new Spire.Pdf.Graphics.PdfMargins(20);
-            htmll.IsWaiting = true;
-            Thread thread = new Thread(()=>
-            { pdfd.LoadFromHTML(path, false, false, false, settings, htmll); });
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
-            pdfd.SaveToFile(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-"+al5[relindex]+"_Date-" + date + "_Relief.pdf");
+            path = @"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-" + al5[relindex] + "_Date-" + date + "_Relief.pdf";
+
+            PdfUnitConvertor uc = new PdfUnitConvertor(); ;
+            PdfMargins marg = new PdfMargins(); ;
+            PdfPageBase page;
+            PdfDocument pdfd;
+            float y = 10;
+            PdfBrush bru;
+            PdfTrueTypeFont fon;
+            PdfStringFormat format;
+            pdfd = new PdfDocument();
+
+
+            marg.Top = uc.ConvertUnits(2.54f, PdfGraphicsUnit.Centimeter, PdfGraphicsUnit.Point);
+            marg.Bottom = marg.Top;
+            marg.Left = uc.ConvertUnits(3.17f, PdfGraphicsUnit.Centimeter, PdfGraphicsUnit.Point);
+            marg.Right = marg.Left;
+            page = pdfd.Pages.Add(PdfPageSize.A4, marg);
+            bru = PdfBrushes.Black;
+            fon = new PdfTrueTypeFont(new Font("Arial", 16f, FontStyle.Bold));
+            format = new PdfStringFormat(PdfTextAlignment.Center);
+            page.Canvas.DrawString(textname, fon, bru, page.Canvas.ClientSize.Width / 2, y, format);
+            y = y + fon.MeasureString(textname, format).Height;
+            y = y + 5;
+       
+            String[] pdfdata= {"Period;Class", "One;"+ relprinter[0] +"", "Two;" + relprinter[1] + "", "Three;" + relprinter[2] + "", "Four;" + relprinter[3] + "", "Five;" + relprinter[4] + "", "Six;" + relprinter[5] + "", "Seven;" + relprinter[6] + "", "Eight;" + relprinter[7] + "" };
+            String[][] dataSource= new String[pdfdata.Length][];
+            for (i = 0; i < pdfdata.Length; i++)
+            {
+                dataSource[i] = pdfdata[i].Split(';');
+            }
+
+            PdfTable pdftable = new PdfTable();
+            pdftable.Style.CellPadding = 2;
+            pdftable.Style.HeaderSource = PdfHeaderSource.Rows;
+            pdftable.Style.HeaderRowCount = 1;
+            pdftable.Style.ShowHeader = true;
+            pdftable.DataSource = dataSource;
+            PdfLayoutResult pdfresult = pdftable.Draw(page, new PointF(0, y));
+            PdfBrush bru2 = PdfBrushes.Gray;
+            PdfTrueTypeFont fon2 = new PdfTrueTypeFont(new Font("Arial", 9f));
+            page.Canvas.DrawString(String.Format("{0}", pdfdata.Length - 1), fon2, bru2, 5, y);
+
+            try
+            {
+                pdfd.SaveToFile(path);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
             pdfd.Close();
-            File.Delete(path);
-            //System.Diagnostics.Process.Start(@"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-1003_Date-" + date + "_Relief.pdf");
+
+
         }
         public static void reliefprint()
         {

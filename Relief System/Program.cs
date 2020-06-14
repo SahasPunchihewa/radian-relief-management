@@ -13,6 +13,9 @@ using Spire.Pdf;
 using Spire.Pdf.Widget;
 using Spire.Pdf.Fields;
 using Spire.Pdf.HtmlConverter;
+using System.Drawing;
+using Spire.Pdf.Graphics;
+using Spire.Pdf.Tables;
 
 namespace Relief_System
 {
@@ -36,9 +39,9 @@ namespace Relief_System
         public static ProcessStartInfo info;
         public static Process pp;
         
-       
         
-            
+
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -46,6 +49,9 @@ namespace Relief_System
 
         public Program()
         {
+
+            
+            
 
             dir = @"C:\Users\Public\Documents\RadianLabs\ReliefText";
             if (!Directory.Exists(dir))
