@@ -22,7 +22,6 @@ namespace Relief_System
         public static void pdfsettings()
         {
             path = @"C:\Users\Public\Documents\RadianLabs\ReliefText\TeacherID-" + al5[relindex] + "_Date-" + date + "_Relief.pdf";
-
             PdfUnitConvertor uc = new PdfUnitConvertor(); ;
             PdfMargins marg = new PdfMargins(); ;
             PdfPageBase page;
@@ -32,8 +31,6 @@ namespace Relief_System
             PdfTrueTypeFont fon;
             PdfStringFormat format;
             pdfd = new PdfDocument();
-
-
             marg.Top = uc.ConvertUnits(2.54f, PdfGraphicsUnit.Centimeter, PdfGraphicsUnit.Point);
             marg.Bottom = marg.Top;
             marg.Left = uc.ConvertUnits(3.17f, PdfGraphicsUnit.Centimeter, PdfGraphicsUnit.Point);
@@ -45,14 +42,12 @@ namespace Relief_System
             page.Canvas.DrawString(textname, fon, bru, page.Canvas.ClientSize.Width / 2, y, format);
             y = y + fon.MeasureString(textname, format).Height;
             y = y + 5;
-       
             String[] pdfdata= {"Period;Class", "One;"+ relprinter[0] +"", "Two;" + relprinter[1] + "", "Three;" + relprinter[2] + "", "Four;" + relprinter[3] + "", "Five;" + relprinter[4] + "", "Six;" + relprinter[5] + "", "Seven;" + relprinter[6] + "", "Eight;" + relprinter[7] + "" };
             String[][] dataSource= new String[pdfdata.Length][];
             for (i = 0; i < pdfdata.Length; i++)
             {
                 dataSource[i] = pdfdata[i].Split(';');
             }
-
             PdfTable pdftable = new PdfTable();
             pdftable.Style.CellPadding = 2;
             pdftable.Style.HeaderSource = PdfHeaderSource.Rows;
@@ -63,7 +58,6 @@ namespace Relief_System
             PdfBrush bru2 = PdfBrushes.Gray;
             PdfTrueTypeFont fon2 = new PdfTrueTypeFont(new Font("Arial", 9f));
             page.Canvas.DrawString(String.Format("{0}", pdfdata.Length - 1), fon2, bru2, 5, y);
-
             try
             {
                 pdfd.SaveToFile(path);
@@ -73,8 +67,6 @@ namespace Relief_System
                 Console.WriteLine(ex);
             }
             pdfd.Close();
-
-
         }
         public static void reliefprint()
         {
