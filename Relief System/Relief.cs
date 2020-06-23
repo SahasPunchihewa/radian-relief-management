@@ -14,6 +14,22 @@ namespace Relief_System
             {
                 timearr[i] = 0;
                 testarr[i] = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 reliefarr[i] = 0;
                 tarr[i] = 0;
             }

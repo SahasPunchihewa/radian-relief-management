@@ -121,7 +121,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "Section Add";
             this.ResumeLayout(false);
             this.PerformLayout();
 

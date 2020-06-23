@@ -38,6 +38,7 @@ namespace Relief_System
         public static PrintDialog pd;
         public static ProcessStartInfo info;
         public static Process pp;
+        public static DialogResult res;
         
         
 

@@ -90,12 +90,12 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM teacher where No='" + tno + "'";
+                cmd.CommandText = "SELECT * FROM teacher where TeacherID='" + tid + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
                     tname = r.GetString("Name");
-                    tid = r.GetString("TeacherID");
+                    tno = r.GetInt32("No");
                 }
                 r.Close();
             }
@@ -126,7 +126,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "update teacher SET Present = '" + present + "'where No = '" + tno + "'";
+                cmd.CommandText = "update teacher SET Present =1 where No = '" + tno + "'";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
