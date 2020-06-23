@@ -16,6 +16,7 @@ using Spire.Pdf.HtmlConverter;
 using System.Drawing;
 using Spire.Pdf.Graphics;
 using Spire.Pdf.Tables;
+using System.Text.RegularExpressions;
 
 namespace Relief_System
 {
@@ -39,7 +40,7 @@ namespace Relief_System
         public static ProcessStartInfo info;
         public static Process pp;
         public static DialogResult res;
-        
+        public static Regex rgx;
         
 
 
@@ -50,7 +51,7 @@ namespace Relief_System
 
         public Program()
         {
-
+            rgx = new Regex("[^a-zA-Z0-9]");
             
             
 

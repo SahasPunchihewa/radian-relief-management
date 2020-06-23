@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Relief_System
 {
@@ -59,7 +60,9 @@ namespace Relief_System
             }
             else
             {
-                Program.classname = textBox1.Text;
+                Program.classname =(textBox1.Text).ToUpper();
+                Program.classname = Program.rgx.Replace(Program.classname, "");
+                Console.WriteLine(Program.classname);
                 Timetable.cnamecheck();
                 if (Program.nameup == 0)
                 {
@@ -172,11 +175,14 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t1.Clear();
-                Program.tn1.Clear();
-                comboBox1.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if(!textBox2.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t1.Clear();
+                    Program.tn1.Clear();
+                    comboBox1.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             
         }
@@ -217,11 +223,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t2.Clear();
-                Program.tn2.Clear();
-                comboBox2.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox3.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t2.Clear();
+                    Program.tn2.Clear();
+                    comboBox2.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -261,11 +270,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t3.Clear();
-                Program.tn3.Clear();
-                comboBox3.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox4.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t3.Clear();
+                    Program.tn3.Clear();
+                    comboBox3.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -305,11 +317,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t4.Clear();
-                Program.tn4.Clear();
-                comboBox4.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox5.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t4.Clear();
+                    Program.tn4.Clear();
+                    comboBox4.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -349,11 +364,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t5.Clear();
-                Program.tn5.Clear();
-                comboBox5.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox6.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t5.Clear();
+                    Program.tn5.Clear();
+                    comboBox5.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -393,11 +411,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t6.Clear();
-                Program.tn7.Clear();
-                comboBox6.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox7.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t6.Clear();
+                    Program.tn6.Clear();
+                    comboBox6.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -437,11 +458,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t7.Clear();
-                Program.tn8.Clear();
-                comboBox7.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox8.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t7.Clear();
+                    Program.tn7.Clear();
+                    comboBox7.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -481,11 +505,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Program.t8.Clear();
-                Program.tn8.Clear();
-                comboBox8.DataSource = null;
-                MessageBox.Show("Please Enter Valied Subject No");
+                if (!textBox9.Text.Equals(""))
+                {
+                    Console.WriteLine(ex.Message);
+                    Program.t8.Clear();
+                    Program.tn8.Clear();
+                    comboBox8.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
         }
 
