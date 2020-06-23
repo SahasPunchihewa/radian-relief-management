@@ -8,6 +8,7 @@ namespace Relief_System
 {
     class Timetable:Program
     {
+        
         public static void cnamecheck()
         {
             nameup = 0;

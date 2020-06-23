@@ -15,6 +15,8 @@ namespace Relief_System
         {
             InitializeComponent();
             Program.classno = 1001;
+            Subject.maxfindsub();
+            Program.maxsub = Program.maxsub - 1000;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,16 +139,36 @@ namespace Relief_System
         {
             try
             {
-                Program.timearr[0] = Convert.ToInt32(textBox2.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox2.Text) + 1000;
-                Program.timet = "One";
-                Timetable.subnameload();
-                Program.t1.Clear();
-                Program.tn1.Clear();
-                Timetable.tloadone();
-                comboBox1.DataSource = null;
-                comboBox1.DataSource = Program.tn1;
-                comboBox1.SelectedIndex = 0;  
+                if (Convert.ToInt32(textBox2.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[0] = Convert.ToInt32(textBox2.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox2.Text) + 1000;
+                        Program.timet = "One";
+                        Timetable.subnameload();
+                        Program.t1.Clear();
+                        Program.tn1.Clear();
+                        Timetable.tloadone();
+                        comboBox1.DataSource = null;
+                        comboBox1.DataSource = Program.tn1;
+                        comboBox1.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t1.Clear();
+                        Program.tn1.Clear();
+                        comboBox1.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t1.Clear();
+                    Program.tn1.Clear();
+                    comboBox1.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch(Exception ex)
             {
@@ -154,22 +176,44 @@ namespace Relief_System
                 Program.t1.Clear();
                 Program.tn1.Clear();
                 comboBox1.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
+            
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[1] = Convert.ToInt32(textBox3.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox3.Text) + 1000;
-                Program.timet = "Two";
-                Timetable.subnameload();
-                Program.t2.Clear();
-                Program.tn2.Clear();
-                Timetable.tloadone();
-                comboBox2.DataSource = null;
-                comboBox2.DataSource = Program.tn2;
-                comboBox2.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox3.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[1] = Convert.ToInt32(textBox3.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox3.Text) + 1000;
+                        Program.timet = "Two";
+                        Timetable.subnameload();
+                        Program.t2.Clear();
+                        Program.tn2.Clear();
+                        Timetable.tloadone();
+                        comboBox2.DataSource = null;
+                        comboBox2.DataSource = Program.tn2;
+                        comboBox2.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t2.Clear();
+                        Program.tn2.Clear();
+                        comboBox2.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t2.Clear();
+                    Program.tn2.Clear();
+                    comboBox2.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
@@ -177,22 +221,43 @@ namespace Relief_System
                 Program.t2.Clear();
                 Program.tn2.Clear();
                 comboBox2.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[2] = Convert.ToInt32(textBox4.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox4.Text) + 1000;
-                Program.timet = "Three";
-                Timetable.subnameload();
-                Program.t3.Clear();
-                Program.tn3.Clear();
-                Timetable.tloadone();
-                comboBox3.DataSource = null;
-                comboBox3.DataSource = Program.tn3;
-                comboBox3.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox4.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[2] = Convert.ToInt32(textBox4.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox4.Text) + 1000;
+                        Program.timet = "Three";
+                        Timetable.subnameload();
+                        Program.t3.Clear();
+                        Program.tn3.Clear();
+                        Timetable.tloadone();
+                        comboBox3.DataSource = null;
+                        comboBox3.DataSource = Program.tn3;
+                        comboBox3.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t3.Clear();
+                        Program.tn3.Clear();
+                        comboBox3.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t3.Clear();
+                    Program.tn3.Clear();
+                    comboBox3.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
@@ -200,22 +265,43 @@ namespace Relief_System
                 Program.t3.Clear();
                 Program.tn3.Clear();
                 comboBox3.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[3] = Convert.ToInt32(textBox5.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox5.Text) + 1000;
-                Program.timet = "Four";
-                Timetable.subnameload();
-                Program.t4.Clear();
-                Program.tn4.Clear();
-                Timetable.tloadone();
-                comboBox4.DataSource = null;
-                comboBox4.DataSource = Program.tn4;
-                comboBox4.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox5.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[3] = Convert.ToInt32(textBox5.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox5.Text) + 1000;
+                        Program.timet = "Four";
+                        Timetable.subnameload();
+                        Program.t4.Clear();
+                        Program.tn4.Clear();
+                        Timetable.tloadone();
+                        comboBox4.DataSource = null;
+                        comboBox4.DataSource = Program.tn4;
+                        comboBox4.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t4.Clear();
+                        Program.tn4.Clear();
+                        comboBox4.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t4.Clear();
+                    Program.tn4.Clear();
+                    comboBox4.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
@@ -223,22 +309,43 @@ namespace Relief_System
                 Program.t4.Clear();
                 Program.tn4.Clear();
                 comboBox4.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[4] = Convert.ToInt32(textBox6.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox6.Text) + 1000;
-                Program.timet = "Five";
-                Timetable.subnameload();
-                Program.t5.Clear();
-                Program.tn5.Clear();
-                Timetable.tloadone();
-                comboBox5.DataSource = null;
-                comboBox5.DataSource = Program.tn5;
-                comboBox5.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox6.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[4] = Convert.ToInt32(textBox6.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox6.Text) + 1000;
+                        Program.timet = "Five";
+                        Timetable.subnameload();
+                        Program.t5.Clear();
+                        Program.tn5.Clear();
+                        Timetable.tloadone();
+                        comboBox5.DataSource = null;
+                        comboBox5.DataSource = Program.tn5;
+                        comboBox5.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t5.Clear();
+                        Program.tn5.Clear();
+                        comboBox5.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t5.Clear();
+                    Program.tn5.Clear();
+                    comboBox5.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
@@ -246,68 +353,131 @@ namespace Relief_System
                 Program.t5.Clear();
                 Program.tn5.Clear();
                 comboBox5.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[5] = Convert.ToInt32(textBox7.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox7.Text) + 1000;
-                Program.timet = "Six";
-                Timetable.subnameload();
-                Program.t6.Clear();
-                Program.tn6.Clear();
-                Timetable.tloadone();
-                comboBox6.DataSource = null;
-                comboBox6.DataSource = Program.tn6;
-                comboBox6.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox7.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[5] = Convert.ToInt32(textBox7.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox7.Text) + 1000;
+                        Program.timet = "Six";
+                        Timetable.subnameload();
+                        Program.t6.Clear();
+                        Program.tn6.Clear();
+                        Timetable.tloadone();
+                        comboBox6.DataSource = null;
+                        comboBox6.DataSource = Program.tn6;
+                        comboBox6.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t6.Clear();
+                        Program.tn6.Clear();
+                        comboBox6.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t6.Clear();
+                    Program.tn6.Clear();
+                    comboBox6.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 Program.t6.Clear();
-                Program.tn6.Clear();
+                Program.tn7.Clear();
                 comboBox6.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.timearr[6] = Convert.ToInt32(textBox8.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox8.Text) + 1000;
-                Program.timet = "Seven";
-                Timetable.subnameload();
-                Program.t7.Clear();
-                Program.tn7.Clear();
-                Timetable.tloadone();
-                comboBox7.DataSource = null;
-                comboBox7.DataSource = Program.tn7;
-                comboBox7.SelectedIndex = 0;
+                if (Convert.ToInt32(textBox8.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[6] = Convert.ToInt32(textBox8.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox8.Text) + 1000;
+                        Program.timet = "Seven";
+                        Timetable.subnameload();
+                        Program.t7.Clear();
+                        Program.tn7.Clear();
+                        Timetable.tloadone();
+                        comboBox7.DataSource = null;
+                        comboBox7.DataSource = Program.tn7;
+                        comboBox7.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t7.Clear();
+                        Program.tn7.Clear();
+                        comboBox7.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t7.Clear();
+                    Program.tn7.Clear();
+                    comboBox7.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 Program.t7.Clear();
-                Program.tn7.Clear();
+                Program.tn8.Clear();
                 comboBox7.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
             try
-            { 
-                Program.timearr[7] = Convert.ToInt32(textBox9.Text) + 1000;
-                Program.subno = Convert.ToInt32(textBox9.Text) + 1000;
-                Program.timet = "Eight";
-                Timetable.subnameload();
-                Program.t8.Clear();
-                Program.tn8.Clear();
-                Timetable.tloadone();
-                comboBox8.DataSource = null;
-                comboBox8.DataSource = Program.tn8;
-                comboBox8.SelectedIndex = 0;
+            {
+                if (Convert.ToInt32(textBox9.Text) <= Program.maxsub)
+                {
+                    try
+                    {
+                        Program.timearr[7] = Convert.ToInt32(textBox9.Text) + 1000;
+                        Program.subno = Convert.ToInt32(textBox9.Text) + 1000;
+                        Program.timet = "Eight";
+                        Timetable.subnameload();
+                        Program.t8.Clear();
+                        Program.tn8.Clear();
+                        Timetable.tloadone();
+                        comboBox8.DataSource = null;
+                        comboBox8.DataSource = Program.tn8;
+                        comboBox8.SelectedIndex = 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        Program.t8.Clear();
+                        Program.tn8.Clear();
+                        comboBox8.DataSource = null;
+                    }
+                }
+                else
+                {
+                    Program.t8.Clear();
+                    Program.tn8.Clear();
+                    comboBox8.DataSource = null;
+                    MessageBox.Show("Please Enter Valied Subject No");
+                }
             }
             catch (Exception ex)
             {
@@ -315,6 +485,7 @@ namespace Relief_System
                 Program.t8.Clear();
                 Program.tn8.Clear();
                 comboBox8.DataSource = null;
+                MessageBox.Show("Please Enter Valied Subject No");
             }
         }
 
