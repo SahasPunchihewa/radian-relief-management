@@ -19,35 +19,118 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Timetable.cnamecheck();
-            Program.classname = textBox1.Text;
-            Program.tindex[0] = comboBox1.SelectedIndex;
-            Program.tindex[1] = comboBox2.SelectedIndex;
-            Program.tindex[2] = comboBox3.SelectedIndex;
-            Program.tindex[3] = comboBox4.SelectedIndex;
-            Program.tindex[4] = comboBox5.SelectedIndex;
-            Program.tindex[5] = comboBox6.SelectedIndex;
-            Program.tindex[6] = comboBox7.SelectedIndex;
-            Program.tindex[7] = comboBox8.SelectedIndex;
-            Timetable.timeadd();
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
-            comboBox1.DataSource = null;
-            comboBox2.DataSource = null;
-            comboBox3.DataSource = null;
-            comboBox4.DataSource = null;
-            comboBox5.DataSource = null;
-            comboBox6.DataSource = null;
-            comboBox7.DataSource = null;
-            comboBox8.DataSource = null;
-            Program.classname = "";
+            if(textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a name for the class!");
+            }
+            else if (textBox2.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 1st period!");
+            }
+            else if (textBox3.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 2nd period!");
+            }
+            else if (textBox4.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 3rd period!");
+            }
+            else if (textBox5.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 4th period!");
+            }
+            else if (textBox6.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 5th period!");
+            }
+            else if (textBox7.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 6th period!");
+            }
+            else if (textBox8.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 7th period!");
+            }
+            else if (textBox9.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter a subject number for the 8th period!");
+            }
+            else
+            {
+                Program.classname = textBox1.Text;
+                Timetable.cnamecheck();
+                if (Program.nameup == 0)
+                {
+                    Program.tindex[0] = comboBox1.SelectedIndex;
+                    Program.tindex[1] = comboBox2.SelectedIndex;
+                    Program.tindex[2] = comboBox3.SelectedIndex;
+                    Program.tindex[3] = comboBox4.SelectedIndex;
+                    Program.tindex[4] = comboBox5.SelectedIndex;
+                    Program.tindex[5] = comboBox6.SelectedIndex;
+                    Program.tindex[6] = comboBox7.SelectedIndex;
+                    Program.tindex[7] = comboBox8.SelectedIndex;
+
+                    if(comboBox1.DataSource==null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 1st period!");
+                    }
+                    else if (comboBox2.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 2nd period!");
+                    }
+                    else if (comboBox3.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 3rd period!");
+                    }
+                    else if (comboBox4.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 4th period!");
+                    }
+                    else if (comboBox5.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 5th period!");
+                    }
+                    else if (comboBox6.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 6th period!");
+                    }
+                    else if (comboBox7.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 7th period!");
+                    }
+                    else if (comboBox8.DataSource == null)
+                    {
+                        MessageBox.Show("Please Select a teacher for the 8th period!");
+                    }
+                    else
+                    {
+                        Timetable.timeadd();
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        textBox8.Text = "";
+                        textBox9.Text = "";
+                        comboBox1.DataSource = null;
+                        comboBox2.DataSource = null;
+                        comboBox3.DataSource = null;
+                        comboBox4.DataSource = null;
+                        comboBox5.DataSource = null;
+                        comboBox6.DataSource = null;
+                        comboBox7.DataSource = null;
+                        comboBox8.DataSource = null;
+                        Program.classname = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This class is exisiting try anothe name!");
+                }
+            }
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -63,9 +146,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox1.DataSource = null;
                 comboBox1.DataSource = Program.tn1;
+                comboBox1.SelectedIndex = 0;  
             }
-            catch(Exception)
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t1.Clear();
                 Program.tn1.Clear();
                 comboBox1.DataSource = null;
@@ -82,12 +167,13 @@ namespace Relief_System
                 Program.t2.Clear();
                 Program.tn2.Clear();
                 Timetable.tloadone();
-                MessageBox.Show("MSG");
                 comboBox2.DataSource = null;
                 comboBox2.DataSource = Program.tn2;
+                comboBox2.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t2.Clear();
                 Program.tn2.Clear();
                 comboBox2.DataSource = null;
@@ -106,9 +192,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox3.DataSource = null;
                 comboBox3.DataSource = Program.tn3;
+                comboBox3.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t3.Clear();
                 Program.tn3.Clear();
                 comboBox3.DataSource = null;
@@ -127,9 +215,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox4.DataSource = null;
                 comboBox4.DataSource = Program.tn4;
+                comboBox4.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t4.Clear();
                 Program.tn4.Clear();
                 comboBox4.DataSource = null;
@@ -148,9 +238,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox5.DataSource = null;
                 comboBox5.DataSource = Program.tn5;
+                comboBox5.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t5.Clear();
                 Program.tn5.Clear();
                 comboBox5.DataSource = null;
@@ -169,9 +261,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox6.DataSource = null;
                 comboBox6.DataSource = Program.tn6;
+                comboBox6.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t6.Clear();
                 Program.tn6.Clear();
                 comboBox6.DataSource = null;
@@ -190,9 +284,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox7.DataSource = null;
                 comboBox7.DataSource = Program.tn7;
+                comboBox7.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t7.Clear();
                 Program.tn7.Clear();
                 comboBox7.DataSource = null;
@@ -201,7 +297,7 @@ namespace Relief_System
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
             try
-            {
+            { 
                 Program.timearr[7] = Convert.ToInt32(textBox9.Text) + 1000;
                 Program.subno = Convert.ToInt32(textBox9.Text) + 1000;
                 Program.timet = "Eight";
@@ -211,9 +307,11 @@ namespace Relief_System
                 Timetable.tloadone();
                 comboBox8.DataSource = null;
                 comboBox8.DataSource = Program.tn8;
+                comboBox8.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Program.t8.Clear();
                 Program.tn8.Clear();
                 comboBox8.DataSource = null;
