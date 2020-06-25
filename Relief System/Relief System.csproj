@@ -179,7 +179,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
+    <None Include="images\teacher add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\subject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\timetable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\relief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\reliefprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icoback.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

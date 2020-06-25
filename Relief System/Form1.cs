@@ -171,5 +171,10 @@ namespace Relief_System
             textBox2.Text = "";
             textBox3.Text = "";
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
