@@ -55,7 +55,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(267, 352);
+            this.button5.Location = new System.Drawing.Point(267, 353);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 140);
             this.button5.TabIndex = 4;
@@ -71,7 +71,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(111, 352);
+            this.button6.Location = new System.Drawing.Point(111, 353);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 140);
             this.button6.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(422, 352);
+            this.button7.Location = new System.Drawing.Point(422, 353);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 140);
             this.button7.TabIndex = 6;
@@ -109,37 +109,37 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 156);
+            this.label2.Location = new System.Drawing.Point(44, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 42);
+            this.label2.Size = new System.Drawing.Size(140, 23);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Manage Teachers";
+            this.label2.Text = "Teachers";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(350, 156);
+            this.label4.Location = new System.Drawing.Point(350, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 42);
+            this.label4.Size = new System.Drawing.Size(140, 23);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Manage Subjects";
+            this.label4.Text = "Subjects";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(497, 156);
+            this.label5.Location = new System.Drawing.Point(502, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 42);
+            this.label5.Size = new System.Drawing.Size(140, 23);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Manage Timetables";
+            this.label5.Text = "Timetables";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
@@ -209,11 +209,11 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(196, 156);
+            this.label3.Location = new System.Drawing.Point(196, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 42);
+            this.label3.Size = new System.Drawing.Size(140, 23);
             this.label3.TabIndex = 9;
             this.label3.Text = "Register";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,33 +221,33 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(111, 508);
+            this.label6.Location = new System.Drawing.Point(111, 509);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 23);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Manage Sections";
+            this.label6.Text = "Sections";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(267, 508);
+            this.label7.Location = new System.Drawing.Point(267, 509);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 23);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Set Relief";
+            this.label7.Text = "Relief";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(422, 508);
+            this.label8.Location = new System.Drawing.Point(422, 509);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 23);
             this.label8.TabIndex = 14;
