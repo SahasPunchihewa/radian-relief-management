@@ -154,6 +154,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Section Add";
             this.ResumeLayout(false);
             this.PerformLayout();
