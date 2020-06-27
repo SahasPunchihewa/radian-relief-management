@@ -60,5 +60,10 @@ namespace Relief_System
             Form7 f7 = new Form7();
             f7.ShowDialog();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
