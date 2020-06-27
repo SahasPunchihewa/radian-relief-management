@@ -14,6 +14,41 @@ namespace Relief_System
         public Form7()
         {
             InitializeComponent();
+            Relief.classmax();
+            Relief.classcount();
+            button4.Hide();
+            Program.classno = 1001;
+            Program.clzno = 1001;
+            for (int j = 0; j < Program.countc; j++)
+            {
+                Relief.classload();
+                Relief.teacherclear();
+                Relief.timeget();
+                Relief.abscheck();
+                Relief.teachertime();
+                for (int k = 0; k < 8; k++)
+                {
+                    if (Program.testarr[k] != 0)
+                    {
+                        Program.newt[k] = Program.testarr[k];
+                    }
+                    else
+                    {
+                        Program.newt[k] = Program.reliefarr[k];
+                    }
+                        Relief.trelupdater();
+                }
+                Relief.reliefclz();
+                Program.classno++;
+                Program.clzno = Program.classno;
+            }
+            for (int k = 0; k < 8; k++)
+            {
+                Program.newt[k] = 0;
+                Program.testarr[k]=0;
+                Program.reliefarr[k]=0;
+            }
+
             labelclear();
             Program.relindex = 0;
             shower();

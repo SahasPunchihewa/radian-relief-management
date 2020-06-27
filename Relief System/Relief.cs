@@ -14,25 +14,26 @@ namespace Relief_System
             {
                 timearr[i] = 0;
                 testarr[i] = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 reliefarr[i] = 0;
                 tarr[i] = 0;
             }
+        }
+        public static void classcount()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(No) FROM `class` WHERE No<2000";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    countc = r.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message + " MSG 12121");
+            }
+            r.Close();
         }
         public static void teachertime()
         {

@@ -15,6 +15,7 @@ namespace Relief_System
         {
             InitializeComponent();
             Relief.classmax();
+            Relief.classcount();
             button4.Hide();
             Program.classno = 1001;
             Program.clzno = 1001;
@@ -23,6 +24,20 @@ namespace Relief_System
                 button2.Hide();
             }
             classshow();
+            for(int j=0;j<Program.countc;j++)
+            {
+                Relief.teacherclear();
+                Relief.timeget();
+                Relief.abscheck();
+                for(int k=0;k<8;k++)
+                {
+                    Relief.trelupdater();
+                }
+                Relief.reliefclz();
+                Program.classno++;
+                Program.clzno++;
+                
+            }
             textBox1.Text = Program.classname;
         }
 
@@ -121,7 +136,7 @@ namespace Relief_System
                         label19.ForeColor = Color.Blue;
                     }
                 }
-                Relief.trelupdater();
+                
             }
             Relief.reliefclz();
         }
