@@ -28,7 +28,7 @@ namespace Relief_System
         public static int nameup = 0,maxclz=0,secc=0,relindex;
         public static String tname, sec,subname,sqlaltetable,classname,relno,sqlcmd,tid,tpno,oldsub,timet,date,reltext,path,dir,textname;
         public static MySqlDataReader r;
-        public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8];
+        public static int[] timearr = new int[8],redsub=new int[8],time2arr = new int[8],tsubarr = new int[8],testarr = new int[8],rarr=new int[8],bluesub=new int[8];
         public static int[] reliefarr = new int[8],tarr = new int[8],newt = new int[8],tindex = new int[8],relload=new int[8],trelp=new int[8];
         public static ArrayList al1,al2,al3,al4,al5,al6;
         public static ArrayList t1, t2, t3, t4, t5, t6, t7, t8;
@@ -73,6 +73,7 @@ namespace Relief_System
             {
                 reliefarr[i] = 0;
                 relload[i] = 0;
+                bluesub[i] = 0;
             }
             db.dbase();
             /*try

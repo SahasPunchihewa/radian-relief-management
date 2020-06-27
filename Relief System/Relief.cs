@@ -59,6 +59,30 @@ namespace Relief_System
             }
             r.Close();
         }
+        public static void relieftime()
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM class where No='" + (clzno+1000) + "'";
+                r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    rarr[0] = r.GetInt32("One");
+                    rarr[1] = r.GetInt32("Two");
+                    rarr[2] = r.GetInt32("Three");
+                    rarr[3] = r.GetInt32("Four");
+                    rarr[4] = r.GetInt32("Five");
+                    rarr[5] = r.GetInt32("Six");
+                    rarr[6] = r.GetInt32("Seven");
+                    rarr[7] = r.GetInt32("Eight");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + " MSG 1213141");
+            }
+            r.Close();
+        }
         public static void classload()
         {
             try
@@ -142,6 +166,18 @@ namespace Relief_System
                     Console.WriteLine(ex.Message);
                 }
                 r.Close();
+            }
+
+        }
+        public static void bluesubshow()
+        {
+            for (i = 0; i < 8; i++)
+            {
+
+                if(tarr[i]!=rarr[i])
+                {
+                    bluesub[i] = 1;
+                }
             }
 
         }

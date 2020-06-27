@@ -342,7 +342,6 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message);
             }
-            Console.WriteLine(al5.Count);
         }
         public static void reltime()
         {
