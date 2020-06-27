@@ -131,6 +131,10 @@ namespace Relief_System
             Teacher.loadrel();
             Teacher.reltime();
             labelseter();
+            if (Program.al5.Count == 1)
+            {
+                button2.Hide();
+            }
         }
         public void labelclear()
         {
