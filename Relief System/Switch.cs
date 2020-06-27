@@ -46,8 +46,7 @@ namespace Relief_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form5 f5 = new Form5();
-            f5.ShowDialog();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)

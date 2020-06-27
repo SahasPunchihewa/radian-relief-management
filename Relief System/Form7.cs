@@ -16,7 +16,6 @@ namespace Relief_System
             InitializeComponent();
             Relief.classmax();
             Relief.classcount();
-            button4.Hide();
             Program.classno = 1001;
             Program.clzno = 1001;
             for (int j = 0; j < Program.countc; j++)
@@ -174,6 +173,12 @@ namespace Relief_System
             TextPrint.pdfsettings();
             TextPrint.reliefprint();
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            f5.ShowDialog();
         }
     }
 }
