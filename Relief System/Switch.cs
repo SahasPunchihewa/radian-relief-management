@@ -64,5 +64,11 @@ namespace Relief_System
         {
 
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.ShowDialog();
+        }
     }
 }
