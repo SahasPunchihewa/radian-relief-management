@@ -18,13 +18,32 @@ namespace Relief_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            registermark();
+        }
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                registermark();
+            }
+        }
+        public void registermark()
+        {
             Program.tid = textBox1.Text;
             Teacher.nameload();
-            Program.res = MessageBox.Show("Are You Sure To Mark "+Program.tname+" As Present ?", "Register", MessageBoxButtons.YesNo);
-            if(Program.res==DialogResult.Yes)
+            if(Program.nc==1)
             {
-                Teacher.register();
-                textBox1.Text = "";
+                Program.res = MessageBox.Show("Are You Sure To Mark " + Program.tname + " As Present ?", "Register", MessageBoxButtons.YesNo);
+                if (Program.res == DialogResult.Yes)
+                {
+                    Teacher.register();
+                    textBox1.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a valied TeacherID");
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
         }
     }

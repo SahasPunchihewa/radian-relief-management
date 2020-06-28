@@ -88,6 +88,7 @@ namespace Relief_System
         }
         public static void nameload()
         {
+            nc = 0;
             try
             {
                 cmd.CommandText = "SELECT * FROM teacher where TeacherID='" + tid + "'";
@@ -96,6 +97,7 @@ namespace Relief_System
                 {
                     tname = r.GetString("Name");
                     tno = r.GetInt32("No");
+                    nc = 1;
                 }
                 r.Close();
             }
