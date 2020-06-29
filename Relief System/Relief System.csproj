@@ -220,5 +220,8 @@
   <ItemGroup>
     <None Include="images\radicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icomain.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
