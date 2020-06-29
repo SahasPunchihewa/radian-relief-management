@@ -48,7 +48,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::Relief_System.Properties.Resources.section;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -64,8 +64,8 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::Relief_System.Properties.Resources.reliefprint;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,9 +82,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 47);
+            this.label1.Location = new System.Drawing.Point(42, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(562, 51);
+            this.label1.Size = new System.Drawing.Size(597, 51);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome To Radian Relief Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Relief_System.Properties.Resources.teacher_add;
+            this.button1.BackgroundImage = global::Relief_System.Properties.Resources.teacher;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -145,7 +145,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Relief_System.Properties.Resources.register;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,7 +161,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Relief_System.Properties.Resources.subject;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,7 +177,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Relief_System.Properties.Resources.timetable;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -223,7 +223,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 23);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Print Relief";
+            this.label8.Text = "Relief";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button5

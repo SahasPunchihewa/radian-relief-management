@@ -83,6 +83,26 @@ namespace Relief_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundform5 {
+            get {
+                object obj = ResourceManager.GetObject("backgroundform5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgroundform7 {
+            get {
+                object obj = ResourceManager.GetObject("backgroundform7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icoback {
             get {
                 object obj = ResourceManager.GetObject("icoback", resourceCulture);
@@ -103,9 +123,9 @@ namespace Relief_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap radicon {
+        internal static System.Drawing.Bitmap print {
             get {
-                object obj = ResourceManager.GetObject("radicon", resourceCulture);
+                object obj = ResourceManager.GetObject("print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,16 +153,6 @@ namespace Relief_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap reliefprint {
-            get {
-                object obj = ResourceManager.GetObject("reliefprint", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap section {
             get {
                 object obj = ResourceManager.GetObject("section", resourceCulture);
@@ -163,9 +173,19 @@ namespace Relief_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap teacher_add {
+        internal static System.Drawing.Bitmap table1 {
             get {
-                object obj = ResourceManager.GetObject("teacher add", resourceCulture);
+                object obj = ResourceManager.GetObject("table1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teacher {
+            get {
+                object obj = ResourceManager.GetObject("teacher", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
