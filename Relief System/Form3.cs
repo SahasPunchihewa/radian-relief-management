@@ -40,9 +40,12 @@ namespace Relief_System
             {
                 MessageBox.Show("Please Enter Subject Number !");
             }
-            Program.subno = Convert.ToInt32(textBox1.Text);
-            Subject.subfind();
-            textBox2.Text = Program.subname;
+            else
+            {
+                Program.subno = Convert.ToInt32(textBox1.Text);
+                Subject.subfind();
+                textBox2.Text = Program.subname;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
