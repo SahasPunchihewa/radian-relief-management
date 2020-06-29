@@ -35,16 +35,21 @@ namespace Relief_System
             classshow();
             textBox1.Text = Program.classname;
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            Program.classname = textBox1.Text;
-            Relief.timetablesearch();
-            Relief.resetter();
-            Relief.classload();
-            Relief.teachertime();
+            if(textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Please Enter Valied Class !");
+            }
+            else
+            {
+                Program.classname = textBox1.Text;
+                Relief.timetablesearch();
+                Relief.resetter();
+                Relief.classload();
+                Relief.teachertime();
+            }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if((Program.classno-1)==1001)

@@ -139,14 +139,21 @@ namespace Relief_System
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Program.tid = textBox1.Text;
-            Teacher.relsearch();
-            shower();
-            button2.Show();
-            if (Program.relindex == 0)
+            if(textBox1.Text.Equals(""))
             {
-                button1.Hide();
+                MessageBox.Show("Please Enter Valied TeacherID");
             }
+            else
+            {
+                Program.tid = textBox1.Text;
+                Teacher.relsearch();
+                shower();
+                button2.Show();
+                if (Program.relindex == 0)
+                {
+                    button1.Hide();
+                }
+            } 
         }
         private void button4_Click(object sender, EventArgs e)
         {
