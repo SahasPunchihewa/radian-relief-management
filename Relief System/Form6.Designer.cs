@@ -156,7 +156,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Section Add";
+            this.Text = "Manage Sections - Radian Relief";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -170,7 +170,7 @@
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Subject";
+            this.Text = "Manage Subjects - Radian Relief";
             this.ResumeLayout(false);
             this.PerformLayout();
 

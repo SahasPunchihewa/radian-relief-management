@@ -471,7 +471,7 @@
             this.MaximizeBox = false;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Timetable";
+            this.Text = "Manage Timetables -Radian Relief";
             this.ResumeLayout(false);
             this.PerformLayout();
 

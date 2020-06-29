@@ -267,7 +267,7 @@
             this.MaximizeBox = false;
             this.Name = "Switch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Switch";
+            this.Text = "Radian Relief Management System";
             this.Load += new System.EventHandler(this.Switch_Load);
             this.ResumeLayout(false);
 

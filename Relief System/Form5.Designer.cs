@@ -503,7 +503,7 @@
             this.MaximizeBox = false;
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relief";
+            this.Text = "Relief View By Classes";
             this.ResumeLayout(false);
             this.PerformLayout();
 

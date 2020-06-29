@@ -418,7 +418,7 @@
             this.MaximizeBox = false;
             this.Name = "Form7";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Teacher Relief";
+            this.Text = "Relief View By Teacher - Radian Relief";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

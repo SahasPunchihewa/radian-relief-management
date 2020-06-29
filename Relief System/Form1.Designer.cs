@@ -246,7 +246,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Teacher Data";
+            this.Text = "Manage Teaches - Radian Relief";
             this.ResumeLayout(false);
             this.PerformLayout();
 
