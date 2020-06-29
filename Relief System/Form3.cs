@@ -36,6 +36,7 @@ namespace Relief_System
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            
             Program.subno = Convert.ToInt32(textBox1.Text);
             Subject.subfind();
             textBox2.Text = Program.subname;

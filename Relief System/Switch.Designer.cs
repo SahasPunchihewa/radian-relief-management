@@ -86,7 +86,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(597, 51);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Welcome To Radian Relief Management System";
+            this.label1.Text = "Welcome To Radian Relief";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
