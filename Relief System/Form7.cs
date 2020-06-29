@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Relief_System
@@ -53,7 +47,6 @@ namespace Relief_System
             shower();
             button1.Hide();
         }
-
         private void Form7_Load(object sender, EventArgs e)
         {
             
@@ -100,7 +93,6 @@ namespace Relief_System
                 }
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Program.relindex++;
@@ -112,7 +104,6 @@ namespace Relief_System
             }
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Program.relindex--;
@@ -146,7 +137,6 @@ namespace Relief_System
             label18.Text = "-";
             label19.Text = "-";
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Program.tid = textBox1.Text;
@@ -158,7 +148,6 @@ namespace Relief_System
                 button1.Hide();
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Program.relprinter[0] = label12.Text;
@@ -174,7 +163,6 @@ namespace Relief_System
             TextPrint.reliefprint();
             
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             Form5 f5 = new Form5();

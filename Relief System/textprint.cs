@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
 using System.Diagnostics;
 using System.Threading;
 using Spire.Pdf;
-using Spire.Pdf.Widget;
-using Spire.Pdf.Fields;
-using Spire.Pdf.HtmlConverter;
 using System.Drawing;
 using Spire.Pdf.Graphics;
 using Spire.Pdf.Tables;

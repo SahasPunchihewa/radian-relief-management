@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Diagnostics;
-using System.Threading;
-using Spire.Pdf;
-using Spire.Pdf.Widget;
-using Spire.Pdf.Fields;
-using Spire.Pdf.HtmlConverter;
-using System.Drawing;
-using Spire.Pdf.Graphics;
-using Spire.Pdf.Tables;
 using System.Text.RegularExpressions;
 
 namespace Relief_System
