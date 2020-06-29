@@ -31,7 +31,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + " MSG 12121");
+                Console.WriteLine(ex.Message + " Error #3");
             }
             r.Close();
         }
@@ -55,7 +55,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + " MSG 1");
+                MessageBox.Show(ex.Message + " Error #4");
             }
             r.Close();
         }
@@ -79,7 +79,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + " MSG 1213141");
+                MessageBox.Show(ex.Message + " Error #5");
             }
             r.Close();
         }
@@ -97,7 +97,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message + " Error #6");
                 r.Close();
             }
         }
@@ -122,7 +122,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+" MSG 3");
+                MessageBox.Show(ex.Message + " Error #7");
             }
             try
             {
@@ -143,7 +143,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + " MSG 33");
+                MessageBox.Show(ex.Message + " Error #8");
             }
         }
         public static void redsubshow()
@@ -163,7 +163,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine(ex.Message + " Error #9");
                 }
                 r.Close();
             }
@@ -211,7 +211,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+" MSG 4"+" "+i);
+                    MessageBox.Show(ex.Message + " Error #10");
                 }
                 r.Close();
             }
@@ -234,7 +234,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+" I 0 1 ");
+                    MessageBox.Show(ex.Message + " Error #11");
                 }
             }
             if (i == 1)
@@ -251,7 +251,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 1 2");
+                    MessageBox.Show(ex.Message + " Error #12");
                 }
             }
             if (i == 2)
@@ -268,7 +268,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 2 3");
+                    MessageBox.Show(ex.Message + " Error #13");
                 }
             }
             if (i == 3)
@@ -285,7 +285,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 3 4");
+                    MessageBox.Show(ex.Message + " Error #14");
                 }
             }
             if (i == 4)
@@ -302,7 +302,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 4 5");
+                    MessageBox.Show(ex.Message + " Error #15");
                 }
             }
             if (i == 5)
@@ -319,7 +319,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 5 6");
+                    MessageBox.Show(ex.Message + " Error #16");
                 }
             }
             if (i == 6)
@@ -336,7 +336,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 6 7");
+                    MessageBox.Show(ex.Message + " Error #17");
                 }
             }
             if (i == 7)
@@ -353,7 +353,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 7 8");
+                    MessageBox.Show(ex.Message + " Error #18");
                 }
             }
             r.NextResult();
@@ -376,7 +376,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 0 ");
+                    MessageBox.Show(ex.Message + " Error #19");
                 }
             }
             if (i == 1)
@@ -393,7 +393,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 1 ");
+                    MessageBox.Show(ex.Message + " Error #20");
                 }
             }
             if (i == 2)
@@ -410,7 +410,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 2 ");
+                    MessageBox.Show(ex.Message + " Error #21");
                 }
             }
             if (i == 3)
@@ -427,7 +427,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 3 ");
+                    MessageBox.Show(ex.Message + " Error #22");
                 }
             }
             if (i == 4)
@@ -444,7 +444,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 4 ");
+                    MessageBox.Show(ex.Message + " Error #23");
                 }
             }
             if (i == 5)
@@ -461,7 +461,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 5 ");
+                    MessageBox.Show(ex.Message + " Error #24");
                 }
             }
             if (i == 6)
@@ -478,7 +478,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 6 ");
+                    MessageBox.Show(ex.Message + " Error #25");
                 }
             }
             if (i == 7)
@@ -495,7 +495,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + " I 7 ");
+                    MessageBox.Show(ex.Message + " Error #26");
                 }
             }
             r.NextResult();
@@ -516,7 +516,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #27");
                 }
             }
             if (i == 1)
@@ -532,7 +532,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #28");
                 }
             }
             if (i == 2)
@@ -548,7 +548,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #29");
                 }
             }
             if (i == 3)
@@ -564,7 +564,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #30");
                 }
             }
             if (i == 4)
@@ -580,7 +580,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #31");
                 }
             }
             if (i == 5)
@@ -596,7 +596,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #32");
                 }
             }
             if (i == 6)
@@ -612,7 +612,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #33");
                 }
             }
             if (i == 7)
@@ -628,7 +628,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #34");
                 }
             }
             r.NextResult();
@@ -648,7 +648,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #35");
                         }
                     }
                     if (i == 1)
@@ -660,7 +660,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #36");
                         }
                     }
                     if (i == 2)
@@ -672,7 +672,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #37");
                         }
                     }
                     if (i == 3)
@@ -684,7 +684,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #38");
                         }
                     }
                     if (i == 4)
@@ -696,7 +696,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #39");
                         }
                     }
                     if (i == 5)
@@ -708,7 +708,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #40");
                         }
                     }
                     if (i == 6)
@@ -720,7 +720,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #41");
                         }
                     }
                     if (i == 7)
@@ -732,7 +732,7 @@ namespace Relief_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message + " Error #42");
                         }
                     }
 
@@ -755,7 +755,7 @@ namespace Relief_System
                 }
                 catch (Exception ex2)
                 {
-                    MessageBox.Show(ex2.Message);
+                    MessageBox.Show(ex2.Message + " Error #43");
                 }
             }
         }
@@ -771,7 +771,7 @@ namespace Relief_System
                 }
                 catch (Exception ex2)
                 {
-                    MessageBox.Show(ex2.Message);
+                    MessageBox.Show(ex2.Message + " Error #44");
                 }
             }
             try
@@ -781,7 +781,7 @@ namespace Relief_System
             }
             catch (Exception ex2)
             {
-                MessageBox.Show(ex2.Message);
+                MessageBox.Show(ex2.Message + " Error #45");
             }
         }
         public static void timetablesearch()
@@ -798,7 +798,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #46");
             }
         }
         public static void classmax()
@@ -814,7 +814,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #47");
             }
             r.Close();
         }

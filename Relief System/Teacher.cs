@@ -64,7 +64,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "MSG 22");
+                    MessageBox.Show(ex.Message + " Error #56");
                 }
             }
             if (niccheck == 1)
@@ -82,7 +82,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "MSG 23");
+                    MessageBox.Show(ex.Message + " Error #57");
                 }
             }
         }
@@ -103,7 +103,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #58");
             }
         }
         public static void nameloadtid()
@@ -121,7 +121,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #59");
             }
         }
         public static void register()
@@ -133,7 +133,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #60");
             }
         }
         public static void subload()
@@ -150,7 +150,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #61");
             }
         }
         public static void teacherload()
@@ -201,7 +201,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 24");
+                MessageBox.Show(ex.Message + " Error #62");
             }
         }
         public static void secload()
@@ -218,7 +218,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #63");
             }
         }
         public static void maxfind()
@@ -248,7 +248,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 245");
+                MessageBox.Show(ex.Message + " Error #64");
             }
             maxfind();
             if((maxno!=tno)&&(maxno!=0))
@@ -260,7 +260,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+"MSG 456");
+                    MessageBox.Show(ex.Message + " Error #65");
                 }
             }
             maxno = 0;
@@ -280,7 +280,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message + " Error #66");
                 r.Close();
             }
         }
@@ -299,7 +299,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message + " Error #67");
                 r.Close();
             }
         }
@@ -312,7 +312,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 2984");
+                MessageBox.Show(ex.Message + " Error #68");
             }
         }
         public static void secdelete()
@@ -324,7 +324,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 2784");
+                MessageBox.Show(ex.Message + " Error #69");
             }
         }
         public static void loadrel()
@@ -342,7 +342,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #70");
             }
         }
         public static void reltime()
@@ -366,7 +366,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #71");
             }
         }
         public static void clear7()
@@ -393,7 +393,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #72");
             }
             if(tno==0)
             {

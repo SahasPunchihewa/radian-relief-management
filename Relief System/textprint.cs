@@ -94,7 +94,7 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message + " Error #73");
             }
         }
     }

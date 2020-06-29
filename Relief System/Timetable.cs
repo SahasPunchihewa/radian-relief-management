@@ -38,7 +38,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+" MSG 111");
+                    MessageBox.Show(ex.Message + " Error #74");
                 }
                 try
                 {
@@ -47,7 +47,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+" MSG 222");
+                    MessageBox.Show(ex.Message + " Error #75");
                 }
             }
             else
@@ -73,7 +73,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #76");
                 }
                 try
                 {
@@ -82,7 +82,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #77");
                 }
             }
             try
@@ -92,7 +92,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #78");
             }
             try
             {
@@ -101,7 +101,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #79");
             }
             try
             {
@@ -110,7 +110,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #80");
             }
             try
             {
@@ -119,7 +119,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #81");
             }
             try
             {
@@ -128,7 +128,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #82");
             }
             try
             {
@@ -137,7 +137,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #83");
             }
             try
             {
@@ -146,7 +146,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #84");
             }
             try
             {
@@ -155,7 +155,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #85");
             }
         }
         public static void subnameload()
@@ -172,7 +172,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #86");
             }
         }
         public static void tloadone()
@@ -228,7 +228,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #87");
             }
         }
         public static void timesearch()
@@ -254,7 +254,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #88");
             }
             try
             {
@@ -275,7 +275,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #89");
             }
             for(i=0; i<8; i++)
             {
@@ -291,7 +291,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #90");
                 }
             }
         }
@@ -304,7 +304,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #91");
             }
             try
             {
@@ -313,7 +313,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #92");
             }
         }
     }

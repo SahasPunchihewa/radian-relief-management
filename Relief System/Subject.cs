@@ -31,7 +31,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+" MSG 2");
+                MessageBox.Show(ex.Message + " Error #48");
             }
             try
             {
@@ -41,7 +41,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+"MSG 3");
+                MessageBox.Show(ex.Message + " Error #49");
             }
         }
         public static void subupdate()
@@ -53,7 +53,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 45678");
+                MessageBox.Show(ex.Message + " Error #50");
             }
             try
             {
@@ -62,7 +62,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 45679");
+                MessageBox.Show(ex.Message + " Error #51");
             }
         }
         public static void oldsubget()
@@ -79,7 +79,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message +"999");
+                MessageBox.Show(ex.Message + " Error #52");
             }
         }
         public static void subfind()
@@ -126,7 +126,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 2456");
+                MessageBox.Show(ex.Message + " Error #53");
             }
             try
             {
@@ -135,7 +135,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "MSG 2457");
+                MessageBox.Show(ex.Message + " Error #54");
             }
             maxfindsub();
             if ((maxsub != subno) && (maxsub != 0))
@@ -147,7 +147,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "MSG 4567");
+                    MessageBox.Show(ex.Message + " Error #55");
                 }
             }
             maxsub = 0;

@@ -124,7 +124,7 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+" Error #1");
             }
             subarr= new String[subcount];
             for(i=0;i<subcount;i++)
@@ -140,7 +140,7 @@ namespace Relief_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message + " Error #2");
                 }
                 r.Close();
             }

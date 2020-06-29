@@ -20,7 +20,7 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + " Error #93");
             }
         }
     }
