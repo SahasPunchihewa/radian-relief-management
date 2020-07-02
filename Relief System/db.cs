@@ -16,7 +16,22 @@ namespace Relief_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message + " Error #93");
+                if(ex.Message.Equals("Unable to connect to any of the specified MySQL hosts."))
+                {
+                    res = MessageBox.Show("Cannot Find Database. Are You Want to Retry? ", "Database Not Found", MessageBoxButtons.YesNo);
+                    if (res == DialogResult.Yes)
+                    {
+                        dbase();
+                    }
+                    else if(res==DialogResult.No)
+                    {
+                        System.Environment.Exit(0);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message + " Error #93");
+                }
             }
         }
     }
