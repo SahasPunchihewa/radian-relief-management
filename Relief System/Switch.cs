@@ -8,10 +8,11 @@ namespace Relief_System
         public Switch()
         {
             InitializeComponent();
+            
         }
         private void Switch_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,6 +64,11 @@ namespace Relief_System
         {
             About ab = new About();
             ab.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

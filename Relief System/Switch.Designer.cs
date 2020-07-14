@@ -88,6 +88,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome To Radian Relief";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

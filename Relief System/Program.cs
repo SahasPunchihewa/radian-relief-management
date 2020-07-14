@@ -5,6 +5,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Relief_System
 {
@@ -29,7 +30,7 @@ namespace Relief_System
         public static Process pp;
         public static DialogResult res;
         public static Regex rgx;
-        
+
 
 
 
@@ -37,18 +38,29 @@ namespace Relief_System
         /// The main entry point for the application.
         /// </summary>
 
+
+        static void Main2(object state)
+        {
+            Application.Run((Form)state);
+        }
         public Program()
         {
-            rgx = new Regex("[^a-zA-Z0-9]");
-            
-            
+            Load lod = new Load();
+            Thread thread = new Thread(Main2);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start(lod);
+            initializer();
+            thread.Abort(lod);
+        }
 
+        public static void initializer()
+        {
+            rgx = new Regex("[^a-zA-Z0-9]");
             dir = @"C:\Users\Public\Documents\RadianLabs\ReliefText";
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
             }
-
             time[0] = "One";
             time[1] = "Two";
             time[2] = "Three";
@@ -57,7 +69,7 @@ namespace Relief_System
             time[5] = "Six";
             time[6] = "Seven";
             time[7] = "Eight";
-            for (i=0;i<8;i++)
+            for (i = 0; i < 8; i++)
             {
                 reliefarr[i] = 0;
                 relload[i] = 0;
@@ -76,7 +88,6 @@ namespace Relief_System
             date = DateTime.Now.ToString("yyyy.MM.dd");
             pd = new PrintDialog();
             pp = new Process();
-            
             al1 = new ArrayList();
             al2 = new ArrayList();
             al3 = new ArrayList();
@@ -99,7 +110,6 @@ namespace Relief_System
             tn6 = new ArrayList();
             tn7 = new ArrayList();
             tn8 = new ArrayList();
-
             try
             {
                 cmd.CommandText = "SELECT COUNT(No) FROM subject";
@@ -112,14 +122,14 @@ namespace Relief_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message+" Error #1");
+                MessageBox.Show(ex.Message + " Error #1");
             }
-            subarr= new String[subcount];
-            for(i=0;i<subcount;i++)
+            subarr = new String[subcount];
+            for (i = 0; i < subcount; i++)
             {
                 try
                 {
-                    cmd.CommandText = "SELECT Name FROM subject where No='"+(i+1000)+"'";
+                    cmd.CommandText = "SELECT Name FROM subject where No='" + (i + 1000) + "'";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -133,12 +143,12 @@ namespace Relief_System
                 r.Close();
             }
         }
-
         static void Main()
         {
-            new Program();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            new Program();
             Application.Run(new Switch());
             con.Close();
         }
