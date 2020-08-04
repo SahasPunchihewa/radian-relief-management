@@ -39,6 +39,7 @@ namespace Relief_System
         /// </summary>
 
 
+
         static void Main2(object state)
         {
             Application.Run((Form)state);

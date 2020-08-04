@@ -137,6 +137,7 @@
     <Compile Include="Teacher.cs" />
     <Compile Include="TextPrint.cs" />
     <Compile Include="Timetable.cs" />
+    <Compile Include="TopMSGBox.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
