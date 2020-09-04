@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 07:22 PM
+-- Generation Time: Sep 04, 2020 at 09:19 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -40,6 +40,44 @@ CREATE TABLE `class` (
   `Seven` int(11) NOT NULL,
   `Eight` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `fri`
+--
+
+CREATE TABLE `fri` (
+  `No` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `One` int(11) NOT NULL,
+  `Two` int(11) NOT NULL,
+  `Three` int(11) NOT NULL,
+  `Four` int(11) NOT NULL,
+  `Five` int(11) NOT NULL,
+  `Six` int(11) NOT NULL,
+  `Seven` int(11) NOT NULL,
+  `Eight` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mon`
+--
+
+CREATE TABLE `mon` (
+  `No` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `One` int(11) NOT NULL,
+  `Two` int(11) NOT NULL,
+  `Three` int(11) NOT NULL,
+  `Four` int(11) NOT NULL,
+  `Five` int(11) NOT NULL,
+  `Six` int(11) NOT NULL,
+  `Seven` int(11) NOT NULL,
+  `Eight` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `section`
@@ -79,10 +117,10 @@ CREATE TABLE `teacher` (
   `Eight` int(11) DEFAULT '0',
   `Present` int(11) DEFAULT NULL,
   `English_Lit` int(11) DEFAULT NULL,
+  `Tamil` int(11) DEFAULT NULL,
   `Drama` int(11) DEFAULT NULL,
   `Dancing` int(11) DEFAULT NULL,
   `Music` int(11) DEFAULT NULL,
-  `Tamil` int(11) DEFAULT NULL,
   `Buddhism` int(11) DEFAULT NULL,
   `Health` int(11) DEFAULT NULL,
   `Art` int(11) DEFAULT NULL,
@@ -95,6 +133,61 @@ CREATE TABLE `teacher` (
   `English` int(11) DEFAULT NULL,
   `Science` int(11) DEFAULT NULL,
   `Maths` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `thu`
+--
+
+CREATE TABLE `thu` (
+  `No` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `One` int(11) NOT NULL,
+  `Two` int(11) NOT NULL,
+  `Three` int(11) NOT NULL,
+  `Four` int(11) NOT NULL,
+  `Five` int(11) NOT NULL,
+  `Six` int(11) NOT NULL,
+  `Seven` int(11) NOT NULL,
+  `Eight` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tue`
+--
+
+CREATE TABLE `tue` (
+  `No` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `One` int(11) NOT NULL,
+  `Two` int(11) NOT NULL,
+  `Three` int(11) NOT NULL,
+  `Four` int(11) NOT NULL,
+  `Five` int(11) NOT NULL,
+  `Six` int(11) NOT NULL,
+  `Seven` int(11) NOT NULL,
+  `Eight` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wed`
+--
+
+CREATE TABLE `wed` (
+  `No` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `One` int(11) NOT NULL,
+  `Two` int(11) NOT NULL,
+  `Three` int(11) NOT NULL,
+  `Four` int(11) NOT NULL,
+  `Five` int(11) NOT NULL,
+  `Six` int(11) NOT NULL,
+  `Seven` int(11) NOT NULL,
+  `Eight` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

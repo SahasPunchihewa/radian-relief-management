@@ -21,3 +21,7 @@ C:\Users\sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System
 C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Spire.Pdf.dll
 C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.About.resources
 C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief_System.Load.resources
+C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Relief System.exe.manifest
+C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\bin\Debug\Relief System.application
+C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.exe.manifest
+C:\Users\Sahas\Documents\Visual Studio 2017\Projects\Relief System\Relief System\obj\Debug\Relief System.application
