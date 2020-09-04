@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2020 at 09:19 AM
+-- Generation Time: Sep 04, 2020 at 10:09 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -57,8 +57,6 @@ CREATE TABLE `fri` (
   `Seven` int(11) NOT NULL,
   `Eight` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `mon`
@@ -201,6 +199,18 @@ ALTER TABLE `class`
   ADD PRIMARY KEY (`No`);
 
 --
+-- Indexes for table `fri`
+--
+ALTER TABLE `fri`
+  ADD PRIMARY KEY (`No`);
+
+--
+-- Indexes for table `mon`
+--
+ALTER TABLE `mon`
+  ADD PRIMARY KEY (`No`);
+
+--
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
@@ -217,6 +227,24 @@ ALTER TABLE `subject`
 --
 ALTER TABLE `teacher`
   ADD UNIQUE KEY `No` (`No`);
+
+--
+-- Indexes for table `thu`
+--
+ALTER TABLE `thu`
+  ADD PRIMARY KEY (`No`);
+
+--
+-- Indexes for table `tue`
+--
+ALTER TABLE `tue`
+  ADD PRIMARY KEY (`No`);
+
+--
+-- Indexes for table `wed`
+--
+ALTER TABLE `wed`
+  ADD PRIMARY KEY (`No`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
