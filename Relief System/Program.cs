@@ -86,7 +86,8 @@ namespace Relief_System
             {
                 MessageBox.Show(ex.Message);
             }*/
-            date = DateTime.Now.ToString("yyyy.MM.dd");
+            date = DateTime.Now.ToString("ddd");
+            Console.WriteLine(date);
             pd = new PrintDialog();
             pp = new Process();
             al1 = new ArrayList();

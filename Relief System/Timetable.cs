@@ -11,7 +11,7 @@ namespace Relief_System
             nameup = 0;
             try
             {
-                cmd.CommandText = "SELECT * FROM class WHERE Name='" + classname + "'";
+                cmd.CommandText = "SELECT * FROM " + date + " WHERE Name='" + classname + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -30,7 +30,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "update class set Name='"+classname+"',One='"+ t1[tindex[0]] + "',Two='"+ t2[tindex[1]] + "',Three='"+ t3[tindex[2]] + "',Four='"+ t4[tindex[3]] + "',Five='"+ t5[tindex[4]] + "',Six='"+ t6[tindex[5]] + "',Seven='"+ t7[tindex[6]] + "',Eight='"+ t8[tindex[7]] + "' where No='"+classno+"'";
+                    cmd.CommandText = "update " + date + " set Name='" + classname+"',One='"+ t1[tindex[0]] + "',Two='"+ t2[tindex[1]] + "',Three='"+ t3[tindex[2]] + "',Four='"+ t4[tindex[3]] + "',Five='"+ t5[tindex[4]] + "',Six='"+ t6[tindex[5]] + "',Seven='"+ t7[tindex[6]] + "',Eight='"+ t8[tindex[7]] + "' where No='"+classno+"'";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -39,7 +39,7 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd.CommandText = "update class set Name='" + classname + "',One='" + timearr[0] + "',Two='" + timearr[1] + "',Three='" + timearr[2] + "',Four='" + timearr[3] + "',Five='" + timearr[4] + "',Six='" + timearr[5] + "',Seven='" + timearr[6] + "',Eight='" + timearr[7] + "' where No='" + (classno+2000) + "'";
+                    cmd.CommandText = "update " + date + " set Name='" + classname + "',One='" + timearr[0] + "',Two='" + timearr[1] + "',Three='" + timearr[2] + "',Four='" + timearr[3] + "',Five='" + timearr[4] + "',Six='" + timearr[5] + "',Seven='" + timearr[6] + "',Eight='" + timearr[7] + "' where No='" + (classno+2000) + "'";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -51,7 +51,7 @@ namespace Relief_System
             {
                 try
                 {
-                    cmd.CommandText = "SELECT MAX(No) FROM class WHERE No<2000;";
+                    cmd.CommandText = "SELECT MAX(No) FROM " + date + " WHERE No<2000;";
                     r = cmd.ExecuteReader();
                     while (r.Read())
                     {
@@ -65,7 +65,7 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + classno + "','" + classname + "','" + t1[tindex[0]] + "','" + t2[tindex[1]] + "','" + t3[tindex[2]] + "','" + t4[tindex[3]] + "','" + t5[tindex[4]] + "','" + t6[tindex[5]] + "','" + t7[tindex[6]] + "','" + t8[tindex[7]] + "')";
+                    cmd.CommandText = "insert into " + date + "(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + classno + "','" + classname + "','" + t1[tindex[0]] + "','" + t2[tindex[1]] + "','" + t3[tindex[2]] + "','" + t4[tindex[3]] + "','" + t5[tindex[4]] + "','" + t6[tindex[5]] + "','" + t7[tindex[6]] + "','" + t8[tindex[7]] + "')";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -74,7 +74,7 @@ namespace Relief_System
                 }
                 try
                 {
-                    cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno + 2000) + "','" + classname + "','" + timearr[0] + "','" + timearr[1] + "','" + timearr[2] + "','" + timearr[3] + "','" + timearr[4] + "','" + timearr[5] + "','" + timearr[6] + "','" + timearr[7] + "')";
+                    cmd.CommandText = "insert into " + date + "(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno + 2000) + "','" + classname + "','" + timearr[0] + "','" + timearr[1] + "','" + timearr[2] + "','" + timearr[3] + "','" + timearr[4] + "','" + timearr[5] + "','" + timearr[6] + "','" + timearr[7] + "')";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -233,7 +233,7 @@ namespace Relief_System
             classno = 0;
             try
             {
-                cmd.CommandText = "SELECT * FROM `class` where Name='" + classname + "' AND No<2000";
+                cmd.CommandText = "SELECT * FROM " + date + " where Name='" + classname + "' AND No<2000";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -255,7 +255,7 @@ namespace Relief_System
             }
             try
             {
-                cmd.CommandText = "SELECT * FROM `class` where Name='" + classname + "' AND No>3000";
+                cmd.CommandText = "SELECT * FROM " + date + " where Name='" + classname + "' AND No>3000";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -296,7 +296,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "DELETE FROM `class` WHERE Name = '"+classname+"'";
+                cmd.CommandText = "DELETE FROM "+date+" WHERE Name = '"+classname+"'";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

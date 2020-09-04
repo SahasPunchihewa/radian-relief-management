@@ -19,7 +19,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT COUNT(No) FROM `class` WHERE No<2000";
+                cmd.CommandText = "SELECT COUNT(No) FROM " + date + " WHERE No<2000";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -36,7 +36,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM class where No='" + clzno + "'";
+                cmd.CommandText = "SELECT * FROM " + date + " where No='" + clzno + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -60,7 +60,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM class where No='" + (clzno+1000) + "'";
+                cmd.CommandText = "SELECT * FROM " + date + " where No='" + (clzno+1000) + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -84,7 +84,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT Name FROM class where No='"+classno+"'";
+                cmd.CommandText = "SELECT Name FROM " + date + " where No='" + classno+"'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -102,7 +102,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM class where No='" + classno + "'";
+                cmd.CommandText = "SELECT * FROM " + date + " where No='" + classno + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -123,7 +123,7 @@ namespace Relief_System
             }
             try
             {
-                cmd.CommandText = "SELECT * FROM class where No='" + (classno+2000) + "'";
+                cmd.CommandText = "SELECT * FROM " + date + " where No='" + (classno+2000) + "'";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -740,14 +740,14 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "insert into class(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno+1000) + "','" + classname + "','" + newt[0] + "','" + newt[1] + "','" + newt[2] + "','" + newt[3] + "','" + newt[4] + "','" + newt[5] + "','" + newt[6] + "','" + newt[7] + "')";
+                cmd.CommandText = "insert into " + date + "(No,Name,One,Two,Three,Four,Five,Six,Seven,Eight) values('" + (classno+1000) + "','" + classname + "','" + newt[0] + "','" + newt[1] + "','" + newt[2] + "','" + newt[3] + "','" + newt[4] + "','" + newt[5] + "','" + newt[6] + "','" + newt[7] + "')";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception)
             {
                 try
                 {
-                    cmd.CommandText = "update class set One='" + newt[0] + "',Two='" + newt[1] + "',Three='" + newt[2] + "',Four='" + newt[3] + "',Five='" + newt[4] + "',Six='" + newt[5] + "',Seven='" + newt[6] + "',Eight='" + newt[0] + "' where No='" + (classno + 1000)+"'";
+                    cmd.CommandText = "update " + date + " set One='" + newt[0] + "',Two='" + newt[1] + "',Three='" + newt[2] + "',Four='" + newt[3] + "',Five='" + newt[4] + "',Six='" + newt[5] + "',Seven='" + newt[6] + "',Eight='" + newt[0] + "' where No='" + (classno + 1000)+"'";
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex2)
@@ -773,7 +773,7 @@ namespace Relief_System
             }
             try
             {
-                cmd.CommandText = "DELETE FROM `class` WHERE NO ='"+(classno+1000)+"'";
+                cmd.CommandText = "DELETE FROM " + date + " WHERE NO ='" + (classno+1000)+"'";
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex2)
@@ -785,7 +785,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT No FROM `class` WHERE Name='"+classname+"' AND No<2000";
+                cmd.CommandText = "SELECT No FROM " + date + " WHERE Name='" + classname+"' AND No<2000";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
@@ -802,7 +802,7 @@ namespace Relief_System
         {
             try
             {
-                cmd.CommandText = "SELECT MAX(No) FROM `class` WHERE No<2000";
+                cmd.CommandText = "SELECT MAX(No) FROM " + date + " WHERE No<2000";
                 r = cmd.ExecuteReader();
                 while (r.Read())
                 {
