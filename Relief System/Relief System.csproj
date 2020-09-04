@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AB0ED84D-0270-40D2-AFAB-BF9AE52B550F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Relief_System</RootNamespace>
     <AssemblyName>Relief System</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
