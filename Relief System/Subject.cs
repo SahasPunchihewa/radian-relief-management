@@ -25,41 +25,43 @@ namespace Relief_System
             {
                 cmd.CommandText = "insert into subject(No,Name) values('" + subno + "','" + subname +"')";
                 cmd.ExecuteNonQuery();
+                try
+                {
+                    sqlaltetable = "alter table teacher add " + subname + " int(11) NULL after Present";
+                    cmd.CommandText = sqlaltetable;
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " Error #49");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + " Error #48");
             }
-            try
-            {
-                sqlaltetable = "alter table teacher add " + subname + " int(11) NULL after Present";
-                cmd.CommandText = sqlaltetable;
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + " Error #49");
-            }
+            
         }
         public static void subupdate()
         {
             try
             {
-                cmd.CommandText = "update subject SET Name = '" + subname + "'where No = '" + subno + "'";
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + " Error #50");
-            }
-            try
-            {
                 cmd.CommandText = "ALTER TABLE `teacher` CHANGE " + oldsub + " " + subname + " INT(11) NULL DEFAULT NULL";
                 cmd.ExecuteNonQuery();
+                try
+                {
+                    cmd.CommandText = "update subject SET Name = '" + subname + "'where No = '" + subno + "'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + " Error #50");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + " Error #51");
+                subadd();
+                //MessageBox.Show(ex.Message + " Error #51");
             }
         }
         public static void oldsubget()

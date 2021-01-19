@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `radian-relief`
 --
-
+CREATE Database radian-relief;
 -- --------------------------------------------------------
 
 --
@@ -113,24 +113,7 @@ CREATE TABLE `teacher` (
   `Six` int(11) DEFAULT '0',
   `Seven` int(11) DEFAULT '0',
   `Eight` int(11) DEFAULT '0',
-  `Present` int(11) DEFAULT NULL,
-  `English_Lit` int(11) DEFAULT NULL,
-  `Tamil` int(11) DEFAULT NULL,
-  `Drama` int(11) DEFAULT NULL,
-  `Dancing` int(11) DEFAULT NULL,
-  `Music` int(11) DEFAULT NULL,
-  `Buddhism` int(11) DEFAULT NULL,
-  `Health` int(11) DEFAULT NULL,
-  `Art` int(11) DEFAULT NULL,
-  `History` int(11) DEFAULT NULL,
-  `Geography` int(11) DEFAULT NULL,
-  `ICT` int(11) DEFAULT NULL,
-  `PTS` int(11) DEFAULT NULL,
-  `LCCE` int(11) DEFAULT NULL,
-  `Sinhala` int(11) DEFAULT NULL,
-  `English` int(11) DEFAULT NULL,
-  `Science` int(11) DEFAULT NULL,
-  `Maths` int(11) DEFAULT NULL
+  `Present` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
